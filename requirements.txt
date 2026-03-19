@@ -1,6 +1,7 @@
-openai
+python-telegram-bot>=20.7
 python-dotenv
 yfinance
+pandas
+openai
 feedparser
 requests
-pandas
