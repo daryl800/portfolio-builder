@@ -1,0 +1,364 @@
+{
+  "generated_at": "2026-03-19T16:03:58.070518Z",
+  "holdings": [
+    {
+      "symbol": "XLV",
+      "position": 36,
+      "avg_price": 137.8978,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "metrics": {
+        "symbol": "XLV",
+        "price": 147.16000366210938,
+        "momentum_1m": -0.06665817612031905,
+        "volume_ratio": 0.5323870195959132,
+        "macd_hist": -0.8638949641269049,
+        "atr": 2.4778736659458707,
+        "score": 5.65
+      },
+      "pnl_pct": 0.06716716047761014,
+      "pnl_value": 333.4393318359379
+    },
+    {
+      "symbol": "VXUS",
+      "position": 35,
+      "avg_price": 72.458594,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "metrics": {
+        "symbol": "VXUS",
+        "price": 76.5999984741211,
+        "momentum_1m": -0.07162772402249483,
+        "volume_ratio": 0.4362111473376609,
+        "macd_hist": -0.42192128737308665,
+        "atr": 1.8464300973074776,
+        "score": 4.04
+      },
+      "pnl_pct": 0.057155462802950446,
+      "pnl_value": 144.9491565942381
+    },
+    {
+      "symbol": "VOO",
+      "position": 13,
+      "avg_price": 596.726946,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "metrics": {
+        "symbol": "VOO",
+        "price": 605.9199829101562,
+        "momentum_1m": -0.03997471366230071,
+        "volume_ratio": 0.32566751342410416,
+        "macd_hist": -1.7296343600603068,
+        "atr": 9.315726143973214,
+        "score": 3.49
+      },
+      "pnl_pct": 0.015405768034742397,
+      "pnl_value": 119.50947983203127
+    },
+    {
+      "symbol": "QQQ",
+      "position": 8,
+      "avg_price": 579.785025,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "metrics": {
+        "symbol": "QQQ",
+        "price": 591.5599975585938,
+        "momentum_1m": -0.023489956890814883,
+        "volume_ratio": 0.5013970737699421,
+        "macd_hist": -0.9007418687124811,
+        "atr": 10.545710972377233,
+        "score": 6.7
+      },
+      "pnl_pct": 0.02030920436172654,
+      "pnl_value": 94.19978046874985
+    },
+    {
+      "symbol": "MSFT",
+      "position": 22,
+      "avg_price": 414.0575,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "metrics": {
+        "symbol": "MSFT",
+        "price": 390.07501220703125,
+        "momentum_1m": -0.023836320698195745,
+        "volume_ratio": 0.30234956241481403,
+        "macd_hist": 0.5564120648792636,
+        "atr": 7.771425519670759,
+        "score": 8.15
+      },
+      "pnl_pct": -0.05792066993827851,
+      "pnl_value": -527.6147314453126
+    },
+    {
+      "symbol": "GOOGL",
+      "position": 20,
+      "avg_price": 313.937075,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "metrics": {
+        "symbol": "GOOGL",
+        "price": 305.760009765625,
+        "momentum_1m": 0.008011153861902948,
+        "volume_ratio": 0.329212942576583,
+        "macd_hist": 0.9271845858884764,
+        "atr": 6.737860543387277,
+        "score": 12.64
+      },
+      "pnl_pct": -0.026046828761384724,
+      "pnl_value": -163.54130468749986
+    },
+    {
+      "symbol": "BND",
+      "position": 34,
+      "avg_price": 74.509432,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "metrics": {
+        "symbol": "BND",
+        "price": 73.70989990234375,
+        "momentum_1m": -0.014441783660405749,
+        "volume_ratio": 0.40111276100468524,
+        "macd_hist": -0.09088331385607068,
+        "atr": 0.3103572300502232,
+        "score": 5.51
+      },
+      "pnl_pct": -0.01073061592599785,
+      "pnl_value": -27.184091320312632
+    },
+    {
+      "symbol": "AAPL",
+      "position": 20,
+      "avg_price": 258.3343,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "metrics": {
+        "symbol": "AAPL",
+        "price": 249.77000427246094,
+        "momentum_1m": -0.05515415734602015,
+        "volume_ratio": 0.3220122854783567,
+        "macd_hist": -1.3251176984062045,
+        "atr": 5.2949981689453125,
+        "score": 2.9
+      },
+      "pnl_pct": -0.03315198844109763,
+      "pnl_value": -171.28591455078094
+    },
+    {
+      "symbol": "9988.HK",
+      "position": 100,
+      "avg_price": 163.354646,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "metrics": {
+        "symbol": "9988.HK",
+        "price": 132.0,
+        "momentum_1m": -0.1505791172171581,
+        "volume_ratio": 1.2577129156306857,
+        "macd_hist": 0.7139193985626839,
+        "atr": 5.449999128069196,
+        "score": 19.31
+      },
+      "pnl_pct": -0.19194217469639646,
+      "pnl_value": -3135.4646000000002
+    },
+    {
+      "symbol": "9696.HK",
+      "position": 200,
+      "avg_price": 57.301629,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "metrics": {
+        "symbol": "9696.HK",
+        "price": 40.02000045776367,
+        "momentum_1m": -0.06495324366477259,
+        "volume_ratio": 0.6775019507032338,
+        "macd_hist": -0.13634872386841845,
+        "atr": 1.9985708509172713,
+        "score": 7.89
+      },
+      "pnl_pct": -0.3015905279453107,
+      "pnl_value": -3456.3257084472652
+    },
+    {
+      "symbol": "3968.HK",
+      "position": 1500,
+      "avg_price": 46.959501,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "metrics": {
+        "symbol": "3968.HK",
+        "price": 48.880001068115234,
+        "momentum_1m": 0.0016393818095376345,
+        "volume_ratio": 1.1742623526549485,
+        "macd_hist": 0.04057774131507107,
+        "atr": 1.0250001634870256,
+        "score": 18.0
+      },
+      "pnl_pct": 0.04089694369016467,
+      "pnl_value": 2880.750102172847
+    },
+    {
+      "symbol": "2600.HK",
+      "position": 2000,
+      "avg_price": 11.571569,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "metrics": {
+        "symbol": "2600.HK",
+        "price": 11.489999771118164,
+        "momentum_1m": -0.0938486203010482,
+        "volume_ratio": 1.4343277533868681,
+        "macd_hist": -0.2621513400128227,
+        "atr": 0.8500000408717564,
+        "score": 18.23
+      },
+      "pnl_pct": -0.007049107072846919,
+      "pnl_value": -163.1384577636723
+    }
+  ],
+  "opportunities": [
+    {
+      "symbol": "NVDA",
+      "metrics": {
+        "symbol": "NVDA",
+        "price": 178.66000366210938,
+        "momentum_1m": -0.04957970144301003,
+        "volume_ratio": 0.4215984589731336,
+        "macd_hist": -0.4044256405585731,
+        "atr": 5.508927481515067,
+        "score": 4.59
+      },
+      "notes": null
+    },
+    {
+      "symbol": "TSLA",
+      "metrics": {
+        "symbol": "TSLA",
+        "price": 383.30999755859375,
+        "momentum_1m": -0.06809785390173446,
+        "volume_ratio": 0.586979743136001,
+        "macd_hist": -0.26826710085680183,
+        "atr": 13.091199602399554,
+        "score": 6.42
+      },
+      "notes": null
+    },
+    {
+      "symbol": "PLTR",
+      "metrics": {
+        "symbol": "PLTR",
+        "price": 154.71119689941406,
+        "momentum_1m": 0.1427920765207167,
+        "volume_ratio": 0.348941636631082,
+        "macd_hist": 1.400414303284574,
+        "atr": 6.218287876674107,
+        "score": 21.44
+      },
+      "notes": null
+    },
+    {
+      "symbol": "AMZN",
+      "metrics": {
+        "symbol": "AMZN",
+        "price": 207.82000732421875,
+        "momentum_1m": 0.014795713352323804,
+        "volume_ratio": 0.32599868051084474,
+        "macd_hist": 0.5024615137281416,
+        "atr": 5.512141636439732,
+        "score": 9.43
+      },
+      "notes": null
+    },
+    {
+      "symbol": "META",
+      "metrics": {
+        "symbol": "META",
+        "price": 607.3900146484375,
+        "momentum_1m": -0.05570404789440942,
+        "volume_ratio": 0.316989150629665,
+        "macd_hist": -4.22895819176609,
+        "atr": 18.139988490513392,
+        "score": 2.81
+      },
+      "notes": null
+    },
+    {
+      "symbol": "AMD",
+      "metrics": {
+        "symbol": "AMD",
+        "price": 200.88180541992188,
+        "momentum_1m": 0.003806767546082886,
+        "volume_ratio": 0.39933987485320166,
+        "macd_hist": 0.8876626240090832,
+        "atr": 8.367142813546318,
+        "score": 13.22
+      },
+      "notes": null
+    },
+    {
+      "symbol": "AVGO",
+      "metrics": {
+        "symbol": "AVGO",
+        "price": 319.2900085449219,
+        "momentum_1m": -0.04263740458853474,
+        "volume_ratio": 0.2925824204523347,
+        "macd_hist": -1.2472469357949176,
+        "atr": 12.925713675362724,
+        "score": 2.9
+      },
+      "notes": null
+    },
+    {
+      "symbol": "TSM",
+      "metrics": {
+        "symbol": "TSM",
+        "price": 334.6000061035156,
+        "momentum_1m": -0.07635400794033226,
+        "volume_ratio": 0.509150719938871,
+        "macd_hist": -3.306195756098185,
+        "atr": 12.627140590122767,
+        "score": 4.96
+      },
+      "notes": null
+    },
+    {
+      "symbol": "ASML",
+      "metrics": {
+        "symbol": "ASML",
+        "price": 1350.81005859375,
+        "momentum_1m": -0.08028073047371148,
+        "volume_ratio": 0.5214029078503651,
+        "macd_hist": -7.455110145849392,
+        "atr": 52.764072963169646,
+        "score": 5.01
+      },
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+symbol,priority,market,category,notes
+MSFT,high,US,core_tech,cloud and AI
+NVDA,high,US,ai_semis,AI leader
+TSLA,medium,US,auto_growth,volatile
+PLTR,medium,US,software_data,watch momentum
+AMZN,medium,US,megacap,watch
+META,medium,US,megacap,watch
+AMD,medium,US,semiconductor,AI and chips
+AVGO,medium,US,semiconductor,quality semi
+TSM,medium,US,semiconductor,foundry leader
+ASML,medium,US,semiconductor,equipment leader

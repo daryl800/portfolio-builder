@@ -1,0 +1,967 @@
+{
+  "generated_at": "2026-03-19T16:03:58.070518Z",
+  "holdings": [
+    {
+      "symbol": "XLV",
+      "position": 36,
+      "avg_price": 137.8978,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 147.16000366210938,
+      "score": 5.65,
+      "pnl_pct": 0.06716716047761014,
+      "pnl_value": 333.4393318359379,
+      "metrics": {
+        "symbol": "XLV",
+        "price": 147.16000366210938,
+        "momentum_1m": -0.06665817612031905,
+        "volume_ratio": 0.5323870195959132,
+        "macd_hist": -0.8638949641269049,
+        "atr": 2.4778736659458707,
+        "score": 5.65
+      },
+      "analysis": {
+        "sentiment": "消極",
+        "short_term_view": "醫療保健類股近期表現疲弱，指數下跌1.6%。",
+        "long_term_view": "醫療保健行業仍具穩定性，但短期內面臨壓力。",
+        "risks": [
+          "油價上升影響市場情緒",
+          "利率調整預期降低"
+        ],
+        "action_label": "review",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Thursday Amid Rising Oil Prices, Reduced Rate-Cut Expectations",
+          "summary": "The broad market exchange-traded fund SPDR S&amp;P 500 ETF Trust (SPY) was down 0.4%, and the actively t",
+          "published": "2026-03-19 12:49"
+        },
+        {
+          "title": "How Is Quest Diagnostics’ Stock Performance Compared to Other Healthcare Stocks?",
+          "summary": "Quest Diagnostics has outpaced its healthcare peers over the past year, and analysts are maintaining a moderately positive outlook on its future performance.",
+          "published": "2026-03-19 10:38"
+        },
+        {
+          "title": "Sector Update: Health Care Stocks Slip Late Afternoon",
+          "summary": "Health care stocks declined late Wednesday afternoon, with the NYSE Health Care Index down 1.6% and",
+          "published": "2026-03-18 19:45"
+        }
+      ]
+    },
+    {
+      "symbol": "VXUS",
+      "position": 35,
+      "avg_price": 72.458594,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 76.5999984741211,
+      "score": 4.04,
+      "pnl_pct": 0.057155462802950446,
+      "pnl_value": 144.9491565942381,
+      "metrics": {
+        "symbol": "VXUS",
+        "price": 76.5999984741211,
+        "momentum_1m": -0.07162772402249483,
+        "volume_ratio": 0.4362111473376609,
+        "macd_hist": -0.42192128737308665,
+        "atr": 1.8464300973074776,
+        "score": 4.04
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "國際股票ETF提供3.3%股息收益，吸引投資者注意。",
+        "long_term_view": "國際市場波動與利率風險低，適合長期配置。",
+        "risks": [
+          "全球經濟不確定性",
+          "利率變動風險"
+        ],
+        "action_label": "hold",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Is Vanguard Total International Stock Index AD (VTIAX) a Strong Mutual Fund Pick Right Now?",
+          "summary": "Mutual Fund Report for VTIAX",
+          "published": "2026-03-17 11:00"
+        },
+        {
+          "title": "VYMI: Why This International ETF Might Keep Beating American Stocks",
+          "summary": "This Vanguard ETF offers international exposure with a 3.3% dividend yield.",
+          "published": "2026-03-13 14:05"
+        },
+        {
+          "title": "Greenline Partners Trims Position in Vanguard 0–3 Month T-Bill ETF, According to Recent SEC Filing",
+          "summary": "The Vanguard 0-3 Month Treasury Bill ETF invests in ultra-short U.S. Treasury securities, giving investors a way to earn short-term government yields while keeping interest-rate risk and portfolio volatility low.",
+          "published": "2026-03-12 23:32"
+        }
+      ]
+    },
+    {
+      "symbol": "VOO",
+      "position": 13,
+      "avg_price": 596.726946,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 605.9199829101562,
+      "score": 3.49,
+      "pnl_pct": 0.015405768034742397,
+      "pnl_value": 119.50947983203127,
+      "metrics": {
+        "symbol": "VOO",
+        "price": 605.9199829101562,
+        "momentum_1m": -0.03997471366230071,
+        "volume_ratio": 0.32566751342410416,
+        "macd_hist": -1.7296343600603068,
+        "atr": 9.315726143973214,
+        "score": 3.49
+      },
+      "analysis": {
+        "sentiment": "積極",
+        "short_term_view": "近期市場波動提供長期投資良機。",
+        "long_term_view": "標普500 ETF長期表現穩健，適合長期持有。",
+        "risks": [
+          "市場短期波動",
+          "經濟政策變動"
+        ],
+        "action_label": "watch",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Should You Buy the Vanguard S&P 500 ETF After the Recent Stock Market Sell-Off? History Offers a Crystal-Clear Answer.",
+          "summary": "Volatility in the stock market often leads to great long-term opportunities for investors.",
+          "published": "2026-03-19 15:05"
+        },
+        {
+          "title": "SPDR S&P 500 ETF Trust vs. Vanguard Total World Stock ETF: Which One Is the Better Buy for Long-Term Investors?",
+          "summary": "Sometimes seemingly little things end up being a very big deal.",
+          "published": "2026-03-18 17:05"
+        },
+        {
+          "title": "VOO vs. SPY vs. IVV: The One Factor That Sets These S&P 500 ETFs Apart",
+          "summary": "The three biggest S&amp;P 500 ETFs look interchangeable, but one factor separates them if you look closely enough.",
+          "published": "2026-03-18 14:05"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "position": 8,
+      "avg_price": 579.785025,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 591.5599975585938,
+      "score": 6.7,
+      "pnl_pct": 0.02030920436172654,
+      "pnl_value": 94.19978046874985,
+      "metrics": {
+        "symbol": "QQQ",
+        "price": 591.5599975585938,
+        "momentum_1m": -0.023489956890814883,
+        "volume_ratio": 0.5013970737699421,
+        "macd_hist": -0.9007418687124811,
+        "atr": 10.545710972377233,
+        "score": 6.7
+      },
+      "analysis": {
+        "sentiment": "消極",
+        "short_term_view": "美股因聯準會利率政策調整預期下降而下跌。",
+        "long_term_view": "科技股面臨利率與市場波動風險，需謹慎觀察。",
+        "risks": [
+          "聯準會利率政策",
+          "市場整體下跌風險"
+        ],
+        "action_label": "review",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Thursday Amid Rising Oil Prices, Reduced Rate-Cut Expectations",
+          "summary": "The broad market exchange-traded fund SPDR S&amp;P 500 ETF Trust (SPY) was down 0.4%, and the actively t",
+          "published": "2026-03-19 12:49"
+        },
+        {
+          "title": "New Fed \"Dot Plot\" Sends Markets Sliding",
+          "summary": "The Fed's new dot-plot calls for just one rate cut this year and one in 2027.",
+          "published": "2026-03-18 21:38"
+        },
+        {
+          "title": "Exchange-Traded Funds Fall as US Equities Decline After Midday",
+          "summary": "Broad Market Indicators Broad-market exchange-traded funds IWM and IVV were lower. Actively trade",
+          "published": "2026-03-18 17:10"
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "position": 22,
+      "avg_price": 414.0575,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 390.07501220703125,
+      "score": 8.15,
+      "pnl_pct": -0.05792066993827851,
+      "pnl_value": -527.6147314453126,
+      "metrics": {
+        "symbol": "MSFT",
+        "price": 390.07501220703125,
+        "momentum_1m": -0.023836320698195745,
+        "volume_ratio": 0.30234956241481403,
+        "macd_hist": 0.5564120648792636,
+        "atr": 7.771425519670759,
+        "score": 8.15
+      },
+      "analysis": {
+        "sentiment": "消極",
+        "short_term_view": "微軟表現疲弱，受多重因素影響，近期股價下跌。",
+        "long_term_view": "軟體產業面臨挑戰，但微軟基本面仍具韌性。",
+        "risks": [
+          "盈利不及預期",
+          "產業競爭加劇"
+        ],
+        "action_label": "hold",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Market Madness: Why JPMorgan, McDonald's are slam dunk stock picks",
+          "summary": "Tipping off Yahoo Finance's \"Market Madness\" bracket tournament, Winthrop Capital CIO Adam Coons joins Julie Hyman to make the case for the first round of corporate match-ups, which includes JPMorgan Chase (JPM) vs. TJX (TJX) and McDonald's (MCD) vs. Disney (DIS).",
+          "published": "2026-03-19 16:00"
+        },
+        {
+          "title": "Long-only funds are buying non-US stocks, BofA says",
+          "summary": "Investing.com -- Long-only investors shifted decisively toward non-U.S. equities in February, according to a new note from Bank of America.",
+          "published": "2026-03-19 15:39"
+        },
+        {
+          "title": "Microsoft’s Worst Start Since 2008. Should You Buy the Dip?",
+          "summary": "The entire software sector is going through a tough time, and Microsoft (NASDAQ:MSFT) is one of the worst victims at the moment. MSFT’s downturn is not due to a single reason and is more multifaceted. The biggest trigger was Microsoft’s earnings on January 28, where the stock fell despite it posting an earnings beat. It’s ... Microsoft’s Worst Start Since 2008. Should You Buy the Dip?",
+          "published": "2026-03-19 14:28"
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "position": 20,
+      "avg_price": 313.937075,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 305.760009765625,
+      "score": 12.64,
+      "pnl_pct": -0.026046828761384724,
+      "pnl_value": -163.54130468749986,
+      "metrics": {
+        "symbol": "GOOGL",
+        "price": 305.760009765625,
+        "momentum_1m": 0.008011153861902948,
+        "volume_ratio": 0.329212942576583,
+        "macd_hist": 0.9271845858884764,
+        "atr": 6.737860543387277,
+        "score": 12.64
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "谷歌積極布局AI與穿戴裝置市場，競爭激烈。",
+        "long_term_view": "長期看好AI技術帶來的成長機會。",
+        "risks": [
+          "市場競爭激烈",
+          "技術發展不確定性"
+        ],
+        "action_label": "watch",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Microsoft’s Worst Start Since 2008. Should You Buy the Dip?",
+          "summary": "The entire software sector is going through a tough time, and Microsoft (NASDAQ:MSFT) is one of the worst victims at the moment. MSFT’s downturn is not due to a single reason and is more multifaceted. The biggest trigger was Microsoft’s earnings on January 28, where the stock fell despite it posting an earnings beat. It’s ... Microsoft’s Worst Start Since 2008. Should You Buy the Dip?",
+          "published": "2026-03-19 14:28"
+        },
+        {
+          "title": "The Zacks Analyst Blog Highlights Apple, Alphabet and Garmin",
+          "summary": "Apple bets on AirPods Max 2 to revive wearables growth amid sales decline and rising competition from Alphabet and Garmin.",
+          "published": "2026-03-19 14:09"
+        },
+        {
+          "title": "Alphabet’s X has a new spinout, and it’s going after one of the world’s most expensive bureaucratic nightmares",
+          "summary": "Anori aims to shrink down the pre-development process by getting all parties, including the city, on to a unified platform from the start so that compliance conflicts are surfaced in weeks instead of months or years.",
+          "published": "2026-03-19 14:00"
+        }
+      ]
+    },
+    {
+      "symbol": "BND",
+      "position": 34,
+      "avg_price": 74.509432,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 73.70989990234375,
+      "score": 5.51,
+      "pnl_pct": -0.01073061592599785,
+      "pnl_value": -27.184091320312632,
+      "metrics": {
+        "symbol": "BND",
+        "price": 73.70989990234375,
+        "momentum_1m": -0.014441783660405749,
+        "volume_ratio": 0.40111276100468524,
+        "macd_hist": -0.09088331385607068,
+        "atr": 0.3103572300502232,
+        "score": 5.51
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "債券ETF適合在經濟不確定時期提供防禦性收益。",
+        "long_term_view": "利率變動與經濟衰退風險需持續關注。",
+        "risks": [
+          "利率上升風險",
+          "經濟衰退可能性"
+        ],
+        "action_label": "hold",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "I’m 58 With $1.2 Million Saved. A Financial Planner Said I’m Making One Critical Mistake",
+          "summary": "A financial planner sat down with a 58-year-old client who had done almost everything right. Steady contributions over three decades. A $1.2 million portfolio. A retirement date penciled in for 62 or 63. Then the planner said something that stopped the conversation cold: the way the money is invested right now could cost more than ... I’m 58 With $1.2 Million Saved. A Financial Planner Said I’m Making One Critical Mistake",
+          "published": "2026-03-17 11:00"
+        },
+        {
+          "title": "7 Dividend ETFs Built to Survive a Recession and Pay You Through It",
+          "summary": "Consumer sentiment hit 56.4 in January 2026, which falls below the 60-point threshold that historically marks recessionary territory. That reading reflects a labor market that has quietly deteriorated — unemployment has drifted up to 4.4% as of February 2026, driven by a string of weak jobs reports that has become hard to dismiss. Prediction markets ... 7 Dividend ETFs Built to Survive a Recession and Pay You Through It",
+          "published": "2026-03-16 09:29"
+        },
+        {
+          "title": "2026 Stock Market Crash Coming? 3 Best ETFs to Protect You Now",
+          "summary": "History shows that midterm election years aren’t always great years for the S&amp;P 500. Are you properly protected against the full blow of a 2026 market crash? Probably not, but there are action steps you can take today to brace for the impact of a potential market collapse. Fortunately, there are safety-first exchange traded funds ... 2026 Stock Market Crash Coming? 3 Best ETFs to Protect You Now",
+          "published": "2026-02-24 19:36"
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "position": 20,
+      "avg_price": 258.3343,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 249.77000427246094,
+      "score": 2.9,
+      "pnl_pct": -0.03315198844109763,
+      "pnl_value": -171.28591455078094,
+      "metrics": {
+        "symbol": "AAPL",
+        "price": 249.77000427246094,
+        "momentum_1m": -0.05515415734602015,
+        "volume_ratio": 0.3220122854783567,
+        "macd_hist": -1.3251176984062045,
+        "atr": 5.2949981689453125,
+        "score": 2.9
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "蘋果持續擴大招聘並提升員工待遇，顯示業務穩健。",
+        "long_term_view": "蘋果在多元產品線與市場地位上具長期競爭力。",
+        "risks": [
+          "全球經濟波動",
+          "市場競爭加劇"
+        ],
+        "action_label": "watch",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Market Madness: Why JPMorgan, McDonald's are slam dunk stock picks",
+          "summary": "Tipping off Yahoo Finance's \"Market Madness\" bracket tournament, Winthrop Capital CIO Adam Coons joins Julie Hyman to make the case for the first round of corporate match-ups, which includes JPMorgan Chase (JPM) vs. TJX (TJX) and McDonald's (MCD) vs. Disney (DIS).",
+          "published": "2026-03-19 16:00"
+        },
+        {
+          "title": "Long-only funds are buying non-US stocks, BofA says",
+          "summary": "Investing.com -- Long-only investors shifted decisively toward non-U.S. equities in February, according to a new note from Bank of America.",
+          "published": "2026-03-19 15:39"
+        },
+        {
+          "title": "Apple salaries: From retail to engineering to CEO",
+          "summary": "Apple has hired thousands of people each year over the last decade or so as its businesses have continued to grow. From research and development to meeting customers at its retail stores, Apple’s employees are in demand. Apple also rewards its employees well, and some are compensated with ...",
+          "published": "2026-03-19 15:39"
+        }
+      ]
+    },
+    {
+      "symbol": "9988.HK",
+      "position": 100,
+      "avg_price": 163.354646,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "current_price": 132.0,
+      "score": 19.31,
+      "pnl_pct": -0.19194217469639646,
+      "pnl_value": -3135.4646000000002,
+      "metrics": {
+        "symbol": "9988.HK",
+        "price": 132.0,
+        "momentum_1m": -0.1505791172171581,
+        "volume_ratio": 1.2577129156306857,
+        "macd_hist": 0.7139193985626839,
+        "atr": 5.449999128069196,
+        "score": 19.31
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "阿里巴巴營收增長低於預期，股價短期承壓。",
+        "long_term_view": "公司積極投入AI與雲端業務，具長期成長潛力。",
+        "risks": [
+          "營收增長放緩",
+          "市場競爭與監管風險"
+        ],
+        "action_label": "review",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "This Fintech Stock Is Up 21% in a Year as Profits Surge, but One Fund's Nearly $300 Million Sale Cut Its Stake in Half",
+          "summary": "Futu Holdings delivers digital brokerage and wealth management solutions to retail and institutional clients across Asia and global markets.",
+          "published": "2026-03-19 15:49"
+        },
+        {
+          "title": "China's Alibaba targets $100B in AI and cloud revenue over 5 years",
+          "summary": "China’s technology giant Alibaba Group pledged on Thursday a goal of surpassing $100 billion in revenue from its artificial intelligence and cloud businesses over the next five years, which it said would be powered by the AI demand boom.  For the October-December quarter, the company, which shifted its focus to cloud and AI technologies in recent years, reported an overall revenue increase of 2% year-on-year to 284.8 billion yuan ($41.4 billion), lower than analysts’ estimates.  CEO Eddie Wu said during an earnings call on Thursday that Alibaba stands to benefit from the “exponential growth in AI demand.”",
+          "published": "2026-03-19 15:15"
+        },
+        {
+          "title": "Alibaba stock falls despite AI outlook, Accenture lowers guidance",
+          "summary": "Yahoo Finance Markets and Data Editor Jared Blikre and Market Catalysts host Julie Hyman take a closer look at some of Thursday morning's trending tickers and stories. Alibaba (BABA) stock is plunging after the company reported revenue that fell short of expectations, though analysts are still bullish on Alibaba's artificial intelligence (AI) outlook. Accenture (ACN) lowered its full-year guidance. Elliott Investment Management is building a stake in Invisalign-maker Align Technology (ALGN).",
+          "published": "2026-03-19 15:10"
+        }
+      ]
+    },
+    {
+      "symbol": "9696.HK",
+      "position": 200,
+      "avg_price": 57.301629,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "current_price": 40.02000045776367,
+      "score": 7.89,
+      "pnl_pct": -0.3015905279453107,
+      "pnl_value": -3456.3257084472652,
+      "metrics": {
+        "symbol": "9696.HK",
+        "price": 40.02000045776367,
+        "momentum_1m": -0.06495324366477259,
+        "volume_ratio": 0.6775019507032338,
+        "macd_hist": -0.13634872386841845,
+        "atr": 1.9985708509172713,
+        "score": 7.89
+      },
+      "analysis": {
+        "sentiment": "積極",
+        "short_term_view": "亞洲部分股票被低估，提供投資機會。",
+        "long_term_view": "基本面良好且具成長潛力的股票值得關注。",
+        "risks": [
+          "經濟不確定性",
+          "估值回調風險"
+        ],
+        "action_label": "watch",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Asian Market Insights: Anhui Jinhe IndustrialLtd And Two Other Stocks Estimated Below Fair Value",
+          "summary": "As global markets navigate a period of economic uncertainty, the Asian stock market presents unique opportunities for discerning investors. With interest rates being adjusted across major economies and concerns about technology valuations impacting indices, identifying stocks that are estimated to be below their fair value can offer potential benefits. In this context, understanding what makes a stock undervalued—such as strong fundamentals or growth potential not yet reflected in its...",
+          "published": "2025-12-19 04:37"
+        },
+        {
+          "title": "Asian Stocks Estimated To Be Trading Below Fair Value In December 2025",
+          "summary": "As global markets navigate a period of fluctuating interest rates and economic uncertainties, Asian stocks have drawn attention for their potential value amid these shifts. In this context, identifying undervalued stocks becomes crucial as investors seek opportunities that may offer resilience and growth in the evolving market landscape.",
+          "published": "2025-12-18 22:34"
+        },
+        {
+          "title": "Asian Value Stocks That Might Be Trading Below Their Estimated Worth",
+          "summary": "As global markets navigate the complexities of shifting interest rates and economic uncertainties, Asia's financial landscape presents intriguing opportunities for investors seeking value. In this environment, identifying stocks that may be trading below their estimated worth requires a keen understanding of market fundamentals and an eye for potential growth amidst prevailing challenges.",
+          "published": "2025-12-15 04:37"
+        }
+      ]
+    },
+    {
+      "symbol": "3968.HK",
+      "position": 1500,
+      "avg_price": 46.959501,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "current_price": 48.880001068115234,
+      "score": 18.0,
+      "pnl_pct": 0.04089694369016467,
+      "pnl_value": 2880.750102172847,
+      "metrics": {
+        "symbol": "3968.HK",
+        "price": 48.880001068115234,
+        "momentum_1m": 0.0016393818095376345,
+        "volume_ratio": 1.1742623526549485,
+        "macd_hist": 0.04057774131507107,
+        "atr": 1.0250001634870256,
+        "score": 18.0
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "Visa支持中國Apple Pay，擴大市場應用。",
+        "long_term_view": "跨境支付與金融科技合作持續推動業務成長。",
+        "risks": [
+          "監管政策變動",
+          "市場競爭加劇"
+        ],
+        "action_label": "hold",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Visa Enables Apple Pay Support for Chinese Visa Cardholders",
+          "summary": "Visa Inc. (NYSE:V) is one of the 15 Best S&amp;P 500 Stocks to Look For in 2026. On January 15, Visa Inc. (NYSE:V) announced that it has enabled Apple Pay support for Chinese Visa cardholders. Eligible customers from the partnering Chinese banks will be allowed to add their Visa cards to Apple Pay and make […]",
+          "published": "2026-01-22 18:08"
+        },
+        {
+          "title": "Thunes and UnionPay International Launch Instant Money Transfers to China's mainland",
+          "summary": "Thunes, the Smart Superhighway to move money around the world, today announces the launch of faster, more reliable, and more transparent payments into China's mainland following a deepened collaboration with UnionPay International (UPI).",
+          "published": "2026-01-22 08:00"
+        },
+        {
+          "title": "Mercuria Successfully Closes USD 2.3 Billion Equivalent Asian Revolving Credit Facilities",
+          "summary": "Mercuria Energy Group Ltd. (\"Mercuria\") is pleased to announce the successful closing of its 2025 Asian Syndicated Revolving Credit Facilities (the \"Facilities\"), totaling over USD 2.3 billion equivalent across USD and CNH tranches.",
+          "published": "2025-11-24 08:55"
+        }
+      ]
+    },
+    {
+      "symbol": "2600.HK",
+      "position": 2000,
+      "avg_price": 11.571569,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "current_price": 11.489999771118164,
+      "score": 18.23,
+      "pnl_pct": -0.007049107072846919,
+      "pnl_value": -163.1384577636723,
+      "metrics": {
+        "symbol": "2600.HK",
+        "price": 11.489999771118164,
+        "momentum_1m": -0.0938486203010482,
+        "volume_ratio": 1.4343277533868681,
+        "macd_hist": -0.2621513400128227,
+        "atr": 0.8500000408717564,
+        "score": 18.23
+      },
+      "analysis": {
+        "sentiment": "積極",
+        "short_term_view": "鋁擠壓市場需求增長，帶動公司估值提升。",
+        "long_term_view": "海外投資擴大全球影響力，長期成長可期。",
+        "risks": [
+          "原材料價格波動",
+          "全球經濟不確定性"
+        ],
+        "action_label": "watch",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Aluminum Extrusion Market worth $166.65 billion by 2030, at a CAGR of 7.0%, says MarketsandMarkets™",
+          "summary": "Delray Beach, FL, Feb. 25, 2026 (GLOBE NEWSWIRE) -- The Aluminum Extrusion Market is estimated to be USD 111.88 billion in 2024 and is projected to reach USD 166.65 billion by 2030, at a CAGR of 7.0%, as per the recent study by MarketsandMarkets™. The demand for aluminum extruded products is on the rise due to the growing need in various applications in the construction & infrastructure, automotive & mass transport, electrical & electronics, machinery & equipment, and other end-use industries. T",
+          "published": "2026-02-25 14:00"
+        },
+        {
+          "title": "Chalco’s Brazilian Deal Expands Global Reach And Raises Valuation Questions",
+          "summary": "Aluminum Corporation of China (SEHK:2600), known as Chalco, and Rio Tinto have jointly acquired a controlling stake in Companhia Brasileira de Alumínio. The deal gives Chalco significant influence over a major Brazilian aluminum producer and marks the company’s largest outbound investment to date. This move expands Chalco’s overseas footprint and increases its role in the global aluminum supply chain. For investors watching SEHK:2600, this transaction comes with the stock at HK$13.85 and...",
+          "published": "2026-02-02 04:28"
+        },
+        {
+          "title": "Basic Materials Roundup: Market Talk",
+          "summary": "BUSINESS  The latest Market Talks covering Basic Materials. Published exclusively on Dow Jones Newswires at 4:20 ET, 12:20 ET and 16:50 ET.  0338 ET – Shares in London-listed miners fall as the price of silver declines and metal markets continue to experience rising volatility.",
+          "published": "2026-01-30 22:03"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "symbol": "PLTR",
+      "metrics": {
+        "symbol": "PLTR",
+        "price": 154.71119689941406,
+        "momentum_1m": 0.1427920765207167,
+        "volume_ratio": 0.348941636631082,
+        "macd_hist": 1.400414303284574,
+        "atr": 6.218287876674107,
+        "score": 21.44
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "Palantir在數據分析領域持續表現穩健，退休投資者增加天使投資比例可能帶來資金流入。",
+        "long_term_view": "公司長期發展依賴於數據分析市場需求及技術創新。",
+        "risks": [
+          "市場需求波動",
+          "競爭加劇"
+        ],
+        "action_label": "watch",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Why More Retirees Are Allocating 5% – 10% to Angel Investing On Top of Dividend Stocks",
+          "summary": "With dividend income continuing to play a central role in retirement portfolios, a growing number of retirees, particularly high-net-worth investors are beginning to allocate 5% to 10% of their portfolios to angel investing. Rather than moving away from traditional strategies, this shift reflects a complementary approach: maintaining reliable income through dividend stocks while selectively adding […]",
+          "published": "2026-03-19 15:34"
+        },
+        {
+          "title": "Intuitive Surgical and Lennar have been highlighted as Zacks Bull and Bear of the Day",
+          "summary": "Intuitive Surgical shines on growth and earnings beats, while Lennar faces falling sales, margins, and a prolonged housing market slump.",
+          "published": "2026-03-19 13:03"
+        },
+        {
+          "title": "Data Analytics Stocks Q4 Earnings: Palantir Technologies (NASDAQ:PLTR) Firing on All Cylinders",
+          "summary": "Let’s dig into the relative performance of Palantir Technologies (NASDAQ:PLTR) and its peers as we unravel the now-completed Q4 data analytics earnings season.",
+          "published": "2026-03-19 11:00"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "metrics": {
+        "symbol": "AMD",
+        "price": 200.88180541992188,
+        "momentum_1m": 0.003806767546082886,
+        "volume_ratio": 0.39933987485320166,
+        "macd_hist": 0.8876626240090832,
+        "atr": 8.367142813546318,
+        "score": 13.22
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "AMD獲得分析師維持中性評級，技術進展穩健但股價波動有限。",
+        "long_term_view": "公司在半導體領域持續創新，長期成長前景看好。",
+        "risks": [
+          "市場競爭激烈",
+          "技術推廣風險"
+        ],
+        "action_label": "hold",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "RBC Capital Maintains a Sector Perform Rating on Advanced Micro Devices (AMD) Stock",
+          "summary": "Advanced Micro Devices, Inc. (NASDAQ:AMD) is one of the Best Semiconductor Stocks to Invest In Now. On March 15, RBC Capital maintained a “Sector Perform” rating and a price objective of $230 on the company’s stock. The company reiterated that MI450/Helios is on track, with Advanced Micro Devices, Inc. (NASDAQ:AMD) having strong conviction in OpenAI and Meta volume ramps […]",
+          "published": "2026-03-19 15:44"
+        },
+        {
+          "title": "Not Even Elon Musk Can Get Nvidia Stock Moving",
+          "summary": "Nvidia stock isn't moving off the back of its GTC conference but Wall Street analysts are still applauding and there’s another high-profile cheerleader—Elon Musk.",
+          "published": "2026-03-19 14:14"
+        },
+        {
+          "title": "AmberSemi to Exhibit at APEC 2026, Showcasing New PowerTile™ Solutions to Solve AI Data Center Power Problems",
+          "summary": "Amber Semiconductor, Inc. (AmberSemi™), a fabless semiconductor company pioneering the next generation of power management for data centers, announced today its attendance at Applied Power Electronics Expo 2026 (APEC) at Booth #834 on the show floor. In addition, the company will chair an Industry Session at APEC titled \"Vertical Power for AI Data Centers\". Presenting with AmberSemi in its industry session will be representatives from AMD, Nvidia, and Global Foundries.",
+          "published": "2026-03-19 14:04"
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "metrics": {
+        "symbol": "AMZN",
+        "price": 207.82000732421875,
+        "momentum_1m": 0.014795713352323804,
+        "volume_ratio": 0.32599868051084474,
+        "macd_hist": 0.5024615137281416,
+        "atr": 5.512141636439732,
+        "score": 9.43
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "亞馬遜相關新聞較少，軟體及零售業整體環境波動，短期表現不明朗。",
+        "long_term_view": "亞馬遜具備長期成長潛力，但需關注市場競爭與宏觀經濟因素。",
+        "risks": [
+          "市場競爭",
+          "宏觀經濟不確定性"
+        ],
+        "action_label": "hold",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Market Madness: Why JPMorgan, McDonald's are slam dunk stock picks",
+          "summary": "Tipping off Yahoo Finance's \"Market Madness\" bracket tournament, Winthrop Capital CIO Adam Coons joins Julie Hyman to make the case for the first round of corporate match-ups, which includes JPMorgan Chase (JPM) vs. TJX (TJX) and McDonald's (MCD) vs. Disney (DIS).",
+          "published": "2026-03-19 16:00"
+        },
+        {
+          "title": "Microsoft’s Worst Start Since 2008. Should You Buy the Dip?",
+          "summary": "The entire software sector is going through a tough time, and Microsoft (NASDAQ:MSFT) is one of the worst victims at the moment. MSFT’s downturn is not due to a single reason and is more multifaceted. The biggest trigger was Microsoft’s earnings on January 28, where the stock fell despite it posting an earnings beat. It’s ... Microsoft’s Worst Start Since 2008. Should You Buy the Dip?",
+          "published": "2026-03-19 14:28"
+        },
+        {
+          "title": "Lands' End Q4 Earnings Call Highlights",
+          "summary": "Lands’ End (NASDAQ:LE) executives told investors the company returned to top-line growth in the fourth quarter of fiscal 2025, pointing to improving momentum across its owned, licensed and marketplace channels while also outlining a pending “transformative” transaction with WHP Global designed to mo",
+          "published": "2026-03-19 13:51"
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "metrics": {
+        "symbol": "TSLA",
+        "price": 383.30999755859375,
+        "momentum_1m": -0.06809785390173446,
+        "volume_ratio": 0.586979743136001,
+        "macd_hist": -0.26826710085680183,
+        "atr": 13.091199602399554,
+        "score": 6.42
+      },
+      "analysis": {
+        "sentiment": "消極",
+        "short_term_view": "因美國監管機構擴大對自駕系統調查，特斯拉股價短期承壓。",
+        "long_term_view": "儘管面臨監管挑戰，特斯拉新技術如Terafab可能成為未來成長動力。",
+        "risks": [
+          "監管調查加深",
+          "技術推廣不及預期"
+        ],
+        "action_label": "review",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Tesla Stock Sinks As U.S. Regulators Deepen FSD Investigation",
+          "summary": "Tesla stock fell about 3% at the open. Road safety regulators expanded an investigation into alleged issues with the cameras that operate as part of Tesla's self-driving systems.",
+          "published": "2026-03-19 15:42"
+        },
+        {
+          "title": "Stellantis Expands North America Fast-charging Access as Dodge, Jeep®, Ram, FIAT and Maserati BEVs Plug In to the Tesla Supercharger Network",
+          "summary": "Stellantis Expands North America Fast-charging Access as Dodge, Jeep®, Ram, FIAT and Maserati BEVs Plug In to the Tesla Supercharger Network",
+          "published": "2026-03-19 15:00"
+        },
+        {
+          "title": "Tesla’s Terafab Could Be the Game-Changer That Recharges the Stock",
+          "summary": "Tesla (NASDAQ:TSLA) stock is back in a bear market, thanks in part to continued weakness across the tech sector. Despite the latest market-wide sell-off, though, I think investors are missing some pretty big developments from the Magnificent Seven titans, especially Tesla. With the company readying to launch its “Terafab” over the weekend, Elon Musk’s empire ... Tesla’s Terafab Could Be the Game-Changer That Recharges the Stock",
+          "published": "2026-03-19 14:47"
+        }
+      ]
+    },
+    {
+      "symbol": "ASML",
+      "metrics": {
+        "symbol": "ASML",
+        "price": 1350.81005859375,
+        "momentum_1m": -0.08028073047371148,
+        "volume_ratio": 0.5214029078503651,
+        "macd_hist": -7.455110145849392,
+        "atr": 52.764072963169646,
+        "score": 5.01
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "投資者關注度提升，市場資金流入非美股，ASML受益於半導體設備需求。",
+        "long_term_view": "作為半導體設備領導者，ASML長期成長潛力強勁。",
+        "risks": [
+          "全球經濟不確定性",
+          "技術更新風險"
+        ],
+        "action_label": "hold",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Long-only funds are buying non-US stocks, BofA says",
+          "summary": "Investing.com -- Long-only investors shifted decisively toward non-U.S. equities in February, according to a new note from Bank of America.",
+          "published": "2026-03-19 15:39"
+        },
+        {
+          "title": "KLA Rival Calibrates New Buy Zone As Top Funds Scoop Up Shares",
+          "summary": "The semiconductor equipment group ranks a stellar No. 3 among the 197 groups Investor's Business Daily tracks and features industry powerhouses like Advanced Energy Industries and ASML. Metrology leader Nova has also etched its name on that list as Nova stock calibrates a new buy point.",
+          "published": "2026-03-19 13:44"
+        },
+        {
+          "title": "ASML Holding N.V. (ASML) is Attracting Investor Attention: Here is What You Should Know",
+          "summary": "Recently, Zacks.com users have been paying close attention to ASML (ASML). This makes it worthwhile to examine what the stock has in store.",
+          "published": "2026-03-19 13:00"
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "metrics": {
+        "symbol": "TSM",
+        "price": 334.6000061035156,
+        "momentum_1m": -0.07635400794033226,
+        "volume_ratio": 0.509150719938871,
+        "macd_hist": -3.306195756098185,
+        "atr": 12.627140590122767,
+        "score": 4.96
+      },
+      "analysis": {
+        "sentiment": "積極",
+        "short_term_view": "美銀證券重申買入評級，反映公司穩健成長與盈利能力。",
+        "long_term_view": "台積電作為全球領先半導體製造商，長期成長前景樂觀。",
+        "risks": [
+          "全球經濟波動",
+          "產能擴張風險"
+        ],
+        "action_label": "hold",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Bank of America Securities Reiterates a Buy Rating on Taiwan Semiconductor Manufacturing Company (TSM) Stock",
+          "summary": "Taiwan Semiconductor Manufacturing Company Limited (NYSE:TSM) is one of the Best Semiconductor Stocks to Invest In Now. On March 10, Haas Liu from Bank of America Securities reiterated a “Buy” rating on the company’s stock with a price objective of $470.00. The analyst’s rating is backed by factors that reflect resilient growth and earnings power. While the […]",
+          "published": "2026-03-19 15:44"
+        },
+        {
+          "title": "Long-only funds are buying non-US stocks, BofA says",
+          "summary": "Investing.com -- Long-only investors shifted decisively toward non-U.S. equities in February, according to a new note from Bank of America.",
+          "published": "2026-03-19 15:39"
+        },
+        {
+          "title": "Tesla’s Terafab Could Be the Game-Changer That Recharges the Stock",
+          "summary": "Tesla (NASDAQ:TSLA) stock is back in a bear market, thanks in part to continued weakness across the tech sector. Despite the latest market-wide sell-off, though, I think investors are missing some pretty big developments from the Magnificent Seven titans, especially Tesla. With the company readying to launch its “Terafab” over the weekend, Elon Musk’s empire ... Tesla’s Terafab Could Be the Game-Changer That Recharges the Stock",
+          "published": "2026-03-19 14:47"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "metrics": {
+        "symbol": "NVDA",
+        "price": 178.66000366210938,
+        "momentum_1m": -0.04957970144301003,
+        "volume_ratio": 0.4215984589731336,
+        "macd_hist": -0.4044256405585731,
+        "atr": 5.508927481515067,
+        "score": 4.59
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "市場對NVIDIA的語音AI投注引發關注，但相關新聞多聚焦於其他公司，短期影響有限。",
+        "long_term_view": "NVIDIA在AI及半導體領域持續發展，長期成長潛力仍被看好。",
+        "risks": [
+          "市場競爭激烈",
+          "相關合作公司表現不佳可能影響NVIDIA"
+        ],
+        "action_label": "hold",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "Market Madness: Why JPMorgan, McDonald's are slam dunk stock picks",
+          "summary": "Tipping off Yahoo Finance's \"Market Madness\" bracket tournament, Winthrop Capital CIO Adam Coons joins Julie Hyman to make the case for the first round of corporate match-ups, which includes JPMorgan Chase (JPM) vs. TJX (TJX) and McDonald's (MCD) vs. Disney (DIS).",
+          "published": "2026-03-19 16:00"
+        },
+        {
+          "title": "SoundHound AI Sinks 6%: What NVIDIA’s Voice AI Bet Says About the Broader Market",
+          "summary": "SoundHound AI (NASDAQ:SOUN) is sliding 6% on Thursday, breaking below the $7 level. The drop follows a late-Wednesday announcement that SoundHound AI CFO Nitesh Sharan is resigning, adding another layer of uncertainty to a stock that was already under pressure. This isn’t an isolated bad day. SOUN stock is now down 31% year to date ... SoundHound AI Sinks 6%: What NVIDIA’s Voice AI Bet Says About the Broader Market",
+          "published": "2026-03-19 15:50"
+        },
+        {
+          "title": "The Smartest Growth Stock to Buy With $500 Right Now",
+          "summary": "Broadcom is expecting monster growth over the next few years.",
+          "published": "2026-03-19 15:50"
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "metrics": {
+        "symbol": "AVGO",
+        "price": 319.2900085449219,
+        "momentum_1m": -0.04263740458853474,
+        "volume_ratio": 0.2925824204523347,
+        "macd_hist": -1.2472469357949176,
+        "atr": 12.925713675362724,
+        "score": 2.9
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "Broadcom預期未來幾年有強勁成長，但面臨歐盟反壟斷調查風險。",
+        "long_term_view": "公司基本面穩健，長期成長潛力良好，但需注意監管風險。",
+        "risks": [
+          "歐盟反壟斷調查",
+          "市場競爭"
+        ],
+        "action_label": "watch",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "The Smartest Growth Stock to Buy With $500 Right Now",
+          "summary": "Broadcom is expecting monster growth over the next few years.",
+          "published": "2026-03-19 15:50"
+        },
+        {
+          "title": "Cloud industry group calls for EU interim measure against Broadcom over VMware",
+          "summary": "Lobbying group Cloud Infrastructure Services Providers in Europe on Thursday ‌urged EU antitrust regulators to temporarily stop Broadcom ‌from ending its VMware Cloud Service Provider programme in Europe, ramping up ​its fight against the U.S. tech company.  CISPE, which has nearly 50 members across Europe and counts Microsoft and Amazon as associate members, sued the European Commission last year for ‌approving Broadcom's acquisition ⁠of VMware in 2023, saying the EU competition watchdog had failed to examine the deal ⁠properly.",
+          "published": "2026-03-19 15:32"
+        },
+        {
+          "title": "Not Even Elon Musk Can Get Nvidia Stock Moving",
+          "summary": "Nvidia stock isn't moving off the back of its GTC conference but Wall Street analysts are still applauding and there’s another high-profile cheerleader—Elon Musk.",
+          "published": "2026-03-19 14:14"
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "metrics": {
+        "symbol": "META",
+        "price": 607.3900146484375,
+        "momentum_1m": -0.05570404789440942,
+        "volume_ratio": 0.316989150629665,
+        "macd_hist": -4.22895819176609,
+        "atr": 18.139988490513392,
+        "score": 2.81
+      },
+      "analysis": {
+        "sentiment": "消極",
+        "short_term_view": "因裁員傳聞及產品延遲，Meta股價短期表現疲弱。",
+        "long_term_view": "長期仍受益於AI技術發展，但需克服內部調整與市場競爭壓力。",
+        "risks": [
+          "裁員及組織調整風險",
+          "產品開發延遲"
+        ],
+        "action_label": "review",
+        "confidence": 0
+      },
+      "news": [
+        {
+          "title": "1 Artificial Intelligence (AI) Stock You Could Hold Forever",
+          "summary": "One of the earliest AI winners could continue to benefit from AI for years to come.",
+          "published": "2026-03-19 15:25"
+        },
+        {
+          "title": "Meta Shares Seen Subdued Amid Job-Cut Speculation, Avocado Delay, Oppenheimer Says",
+          "summary": "Meta Platforms (META) shares are expected to remain subdued as speculation about a 20% workforce red",
+          "published": "2026-03-19 15:15"
+        },
+        {
+          "title": "Chamath Palihapitiya Plans Robotaxi Fleets Nationwide — Expects Positive Cash Flow In Under 2 Years",
+          "summary": "Billionaire tech investor Chamath Palihapitiya says he plans to deploy Tesla Inc.'s (NASDAQ:TSLA) robotaxi Cybercab vehicles nationwide—and believes the investment could turn cash-flow positive faster than expected. \"I plan to buy and deploy large fleets around the country when possible. Should pay back and be positive FCF < 2 years…\" he wrote on X on March 7 in response to a post analyzing the business case for Tesla's Cybercab robotaxi network. In this context, \"positive FCF,\" or free cash flo",
+          "published": "2026-03-19 14:46"
+        }
+      ]
+    }
+  ]
+}

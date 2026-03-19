@@ -1,0 +1,47 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Coverage / test output
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.pyre/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local generated files
+data/cache/
+
+# Optional: ignore generated reports if you don't want them in git
+output/
+
