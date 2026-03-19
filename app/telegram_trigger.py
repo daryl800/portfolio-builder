@@ -1,54 +1,74 @@
 #!/usr/bin/env python3
+import asyncio
 import subprocess
-import os
 from pathlib import Path
-from telegram.ext import Application, CommandHandler
+
+from telegram import Update
+from telegram.ext import Application, CommandHandler, ContextTypes
+
 from app.config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
-from app.report import send_telegram_message  # 可選
 
 PROJECT_DIR = Path.home() / "Apps/portfolio-builder"
 
-def run_portfolio(update, context):
+async def run_portfolio(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
     if chat_id != int(TELEGRAM_CHAT_ID):
-        update.message.reply_text("🚫 無權限，只有主人能用")
+        await update.message.reply_text("🚫 無權限，只有主人能用")
         return
-    
-    update.message.reply_text("🟡 開始執行 <b>portfolio builder</b>...")
-    
+
+    await update.message.reply_text("🟡 開始執行 portfolio builder...")
+
     cmd = [
         str(PROJECT_DIR / ".venv/bin/python"),
-        "-m", "app.run_daily_portfolio"
+        "-m", "app.run_daily_portfolio",
     ]
-    
+
     try:
-        result = subprocess.run(cmd, cwd=PROJECT_DIR, capture_output=True, 
-                               text=True, timeout=600)
-        
+        # Run the subprocess in a thread pool to avoid blocking
+        loop = asyncio.get_event_loop()
+        result = await loop.run_in_executor(
+            None,
+            lambda: subprocess.run(
+                cmd,
+                cwd=PROJECT_DIR,
+                capture_output=True,
+                text=True,
+                timeout=600,
+            )
+        )
+
         if result.returncode == 0:
-            msg = "✅ <b>Portfolio builder 完成！</b>\n\n檢查 VPS OpenClaw input。"
-            update.message.reply_text(msg, parse_mode="HTML")
+            await update.message.reply_text(
+                "✅ Portfolio builder 完成！\n請檢查 VPS 上的 OpenClaw input。"
+            )
         else:
-            error_msg = result.stderr or result.stdout
-            update.message.reply_text(f"❌ 失敗：\n<pre>{error_msg[:1000]}</pre>", parse_mode="HTML")
-            
+            error_msg = result.stderr or result.stdout or "unknown error"
+            await update.message.reply_text(f"❌ 失敗：\n{error_msg[:1000]}")
     except subprocess.TimeoutExpired:
-        update.message.reply_text("⏰ 超時（10 分鐘）")
+        await update.message.reply_text("⏰ 超時（10 分鐘），可能卡在 yfinance")
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("👋 嗨，我是 Pi 上的 portfolio trigger。\n用 /run_portfolio 來跑每日投組。")
 
 def main():
     print(f"DEBUG: TELEGRAM_BOT_TOKEN exists: {bool(TELEGRAM_BOT_TOKEN)}")
     print(f"DEBUG: TELEGRAM_CHAT_ID: {TELEGRAM_CHAT_ID}")
-    
+
     if not TELEGRAM_BOT_TOKEN:
         print("❌ TELEGRAM_BOT_TOKEN 沒設")
         return
+
+    # Create the Application
+    application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
+
+    # Add handlers
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("run_portfolio", run_portfolio))
+
+    print("🚀 Bot 啟動！到 Telegram 打 /run_portfolio")
     
-    app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
-    app.add_handler(CommandHandler("run_portfolio", run_portfolio))
-    app.add_handler(CommandHandler("status", lambda u,c: u.message.reply_text("Pi OK")))
-    
-    print("🚀 Bot 啟動！打 /run_portfolio 試試")
-    app.run_polling(drop_pending_updates=True)  # 同步，超穩
+    # Run the bot
+    application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,946 @@
+{
+  "generated_at": "2026-03-19T21:52:18.043537Z",
+  "holdings": [
+    {
+      "symbol": "XLV",
+      "position": 36,
+      "avg_price": 137.8978,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 146.61000061035156,
+      "score": 13.89,
+      "pnl_pct": 0.06317867732735094,
+      "pnl_value": 313.6392219726566,
+      "metrics": {
+        "symbol": "XLV",
+        "price": 146.61000061035156,
+        "momentum_1m": -0.07014649386082207,
+        "volume_ratio": 1.089513363393626,
+        "macd_hist": -0.8973631562559563,
+        "atr": 2.516430446079799,
+        "score": 13.89
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Sector Update: Health Care Stocks Softer Late Afternoon",
+          "summary": "Health care stocks were softer late Thursday afternoon, with the NYSE Health Care Index decreasing 0",
+          "published": "2026-03-19 19:48"
+        },
+        {
+          "title": "Sector Update: Health Care Stocks Lower in Afternoon Trading",
+          "summary": "Health care stocks declined Thursday afternoon, with the NYSE Health Care Index down 0.4% and the St",
+          "published": "2026-03-19 17:56"
+        },
+        {
+          "title": "Energy stocks can’t carry the entire market alone: Chart of the Day",
+          "summary": "In March, energy has been the only sector that has really held up — and it is not big enough to carry the entire S&amp;P 500 on its own.",
+          "published": "2026-03-19 17:46"
+        }
+      ]
+    },
+    {
+      "symbol": "VXUS",
+      "position": 35,
+      "avg_price": 72.458594,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 77.1500015258789,
+      "score": 11.49,
+      "pnl_pct": 0.06474604690616687,
+      "pnl_value": 164.19926340576154,
+      "metrics": {
+        "symbol": "VXUS",
+        "price": 77.1500015258789,
+        "momentum_1m": -0.06496182852476215,
+        "volume_ratio": 0.9177806093834677,
+        "macd_hist": -0.38491771836294,
+        "atr": 1.8667875017438615,
+        "score": 11.49
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Calydon Capital Dumps $9 Million of ZoomInfo Amid Stock's 92% Decline Since 2021",
+          "summary": "ZoomInfo Technologies offers cloud-based data and workflow tools for sales, marketing, and recruiting teams across diverse industries.",
+          "published": "2026-03-19 19:33"
+        },
+        {
+          "title": "Is Vanguard Total International Stock Index AD (VTIAX) a Strong Mutual Fund Pick Right Now?",
+          "summary": "Mutual Fund Report for VTIAX",
+          "published": "2026-03-17 11:00"
+        },
+        {
+          "title": "VYMI: Why This International ETF Might Keep Beating American Stocks",
+          "summary": "This Vanguard ETF offers international exposure with a 3.3% dividend yield.",
+          "published": "2026-03-13 14:05"
+        }
+      ]
+    },
+    {
+      "symbol": "VOO",
+      "position": 13,
+      "avg_price": 596.726946,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 606.75,
+      "score": 8.47,
+      "pnl_pct": 0.016796717606246663,
+      "pnl_value": 130.29970200000002,
+      "metrics": {
+        "symbol": "VOO",
+        "price": 606.75,
+        "momentum_1m": -0.03865962682440617,
+        "volume_ratio": 0.6548349412352366,
+        "macd_hist": -1.666829070740639,
+        "atr": 9.407867431640625,
+        "score": 8.47
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Energy stocks can’t carry the entire market alone: Chart of the Day",
+          "summary": "In March, energy has been the only sector that has really held up — and it is not big enough to carry the entire S&amp;P 500 on its own.",
+          "published": "2026-03-19 17:46"
+        },
+        {
+          "title": "Should You Buy the Vanguard S&P 500 ETF After the Recent Stock Market Sell-Off? History Offers a Crystal-Clear Answer.",
+          "summary": "Volatility in the stock market often leads to great long-term opportunities for investors.",
+          "published": "2026-03-19 15:05"
+        },
+        {
+          "title": "SPDR S&P 500 ETF Trust vs. Vanguard Total World Stock ETF: Which One Is the Better Buy for Long-Term Investors?",
+          "summary": "Sometimes seemingly little things end up being a very big deal.",
+          "published": "2026-03-18 17:05"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "position": 8,
+      "avg_price": 579.785025,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 593.02001953125,
+      "score": 14.58,
+      "pnl_pct": 0.0228274169917548,
+      "pnl_value": 105.87995624999985,
+      "metrics": {
+        "symbol": "QQQ",
+        "price": 593.02001953125,
+        "momentum_1m": -0.021079844433341464,
+        "volume_ratio": 1.0208652849541529,
+        "macd_hist": -0.7977762326123026,
+        "atr": 10.609994070870536,
+        "score": 14.58
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Invesco QEW ETF Targets Nasdaq 100 Concentration Risk And Growth Story",
+          "summary": "Invesco (NYSE:IVZ) has launched the Invesco QQQ Equal Weight ETF (QEW), expanding its QQQ Innovation Suite. The new ETF offers exposure to Nasdaq-100 companies using an equal-weight approach that aims to reduce concentration risk. This product adds another option for investors seeking systematic access to large US growth and technology oriented names. Invesco is adding QEW at a time when its own shares trade around $23.42, with a mixed return profile. The stock shows a 56.6% return over 1...",
+          "published": "2026-03-19 19:05"
+        },
+        {
+          "title": "Exchange-Traded Funds Edge Lower as US Equities Fall After Midday",
+          "summary": "Broad Market Indicators Broad-market exchange-traded funds IWM and IVV declined. Actively traded",
+          "published": "2026-03-19 17:07"
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Lower Pre-Bell Thursday Amid Rising Oil Prices, Reduced Rate-Cut Expectations",
+          "summary": "The broad market exchange-traded fund SPDR S&amp;P 500 ETF Trust (SPY) was down 0.4%, and the actively t",
+          "published": "2026-03-19 12:49"
+        }
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "position": 22,
+      "avg_price": 414.0575,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 389.0199890136719,
+      "score": 14.07,
+      "pnl_pct": -0.06046868124916981,
+      "pnl_value": -550.8252416992189,
+      "metrics": {
+        "symbol": "MSFT",
+        "price": 389.0199890136719,
+        "momentum_1m": -0.02647651883944921,
+        "volume_ratio": 0.7412396951958307,
+        "macd_hist": 0.4845504078491265,
+        "atr": 7.839283534458706,
+        "score": 14.07
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Microsoft Stock Has Been Absolutely Slammed This Year. Is It Finally Time to Buy?",
+          "summary": "Microsoft's latest results were solid, but its soaring infrastructure costs are hard to ignore.",
+          "published": "2026-03-19 20:23"
+        },
+        {
+          "title": "Adobe Stock Hits 7-Year Low After It's Branded AI Loser",
+          "summary": "Adobe stock hit a seven-year low after an analyst report branded the software firm a loser in the AI megatrend.",
+          "published": "2026-03-19 20:21"
+        },
+        {
+          "title": "How The Microsoft (MSFT) Investment Story Is Shifting With AI Optimism And Caution",
+          "summary": "Microsoft’s fair value price target has been nudged from US$595.99 to US$594.62, a small reset that keeps the broader long term story largely intact. Analysts linking this move to AI related capital spending, growth assumptions, and recalibrated expectations describe a more balanced mix of enthusiasm and caution, with some trimming targets while maintaining constructive views. As you read on, you will see how these shifts fit into the evolving Microsoft narrative and what to watch as new...",
+          "published": "2026-03-19 20:05"
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "position": 20,
+      "avg_price": 313.937075,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 307.1300048828125,
+      "score": 21.16,
+      "pnl_pct": -0.021682912466415422,
+      "pnl_value": -136.14140234374986,
+      "metrics": {
+        "symbol": "GOOGL",
+        "price": 307.1300048828125,
+        "momentum_1m": 0.01252767111319393,
+        "volume_ratio": 0.8337034881000551,
+        "macd_hist": 1.0264897104553747,
+        "atr": 6.762860979352679,
+        "score": 21.16
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Alphabet Taps Health100 To Extend Gemini Deeper Into Consumer Healthcare",
+          "summary": "Google Cloud and CVS Health announced Health100, an AI powered health engagement platform, scheduled to launch in 2026. The platform is planned to use Gemini AI models, interoperability tools, and multimodal AI to support real time health engagement. Health100 is expected to cover pharmacy, insurance, and digital health, including integration of biometric data from wearables. The collaboration marks an expansion of Alphabet’s NasdaqGS:GOOGL efforts in connected digital health and open...",
+          "published": "2026-03-19 21:04"
+        },
+        {
+          "title": "Anthony Scaramucci Backs Michael Saylor's Preferred Stock Bet: 'This Is His iPhone Moment...Has Set The Clock On Global Adoption'",
+          "summary": "Anthony Scaramucci, the founder and managing partner of SkyBridge Capital, labeled Strategy Inc.‘s preferred stock issuance an “iPhone moment” that would trigger widespread Bitcoin adoption. Setting The ‘Clock On Global Adoption’ In an X post, Scaramucci said that Strategy’s high-yield...",
+          "published": "2026-03-19 20:31"
+        },
+        {
+          "title": "Planet Reports Financial Results for Fourth Quarter and Full Fiscal Year 2026",
+          "summary": "SAN FRANCISCO, March 19, 2026--Planet Labs PBC (NYSE: PL) (\"Planet\" or the \"Company\"), a leading provider of daily data and insights about change on Earth, today announced financial results for the period ended January 31, 2026.",
+          "published": "2026-03-19 20:05"
+        }
+      ]
+    },
+    {
+      "symbol": "BND",
+      "position": 34,
+      "avg_price": 74.509432,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 73.76000213623047,
+      "score": 14.07,
+      "pnl_pct": -0.010058187851566699,
+      "pnl_value": -25.480615368164194,
+      "metrics": {
+        "symbol": "BND",
+        "price": 73.76000213623047,
+        "momentum_1m": -0.013771878147992299,
+        "volume_ratio": 0.970122544444331,
+        "macd_hist": -0.08777657653362476,
+        "atr": 0.3210716247558594,
+        "score": 14.07
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "I’m 58 With $1.2 Million Saved. A Financial Planner Said I’m Making One Critical Mistake",
+          "summary": "A financial planner sat down with a 58-year-old client who had done almost everything right. Steady contributions over three decades. A $1.2 million portfolio. A retirement date penciled in for 62 or 63. Then the planner said something that stopped the conversation cold: the way the money is invested right now could cost more than ... I’m 58 With $1.2 Million Saved. A Financial Planner Said I’m Making One Critical Mistake",
+          "published": "2026-03-17 11:00"
+        },
+        {
+          "title": "7 Dividend ETFs Built to Survive a Recession and Pay You Through It",
+          "summary": "Consumer sentiment hit 56.4 in January 2026, which falls below the 60-point threshold that historically marks recessionary territory. That reading reflects a labor market that has quietly deteriorated — unemployment has drifted up to 4.4% as of February 2026, driven by a string of weak jobs reports that has become hard to dismiss. Prediction markets ... 7 Dividend ETFs Built to Survive a Recession and Pay You Through It",
+          "published": "2026-03-16 09:29"
+        },
+        {
+          "title": "2026 Stock Market Crash Coming? 3 Best ETFs to Protect You Now",
+          "summary": "History shows that midterm election years aren’t always great years for the S&amp;P 500. Are you properly protected against the full blow of a 2026 market crash? Probably not, but there are action steps you can take today to brace for the impact of a potential market collapse. Fortunately, there are safety-first exchange traded funds ... 2026 Stock Market Crash Coming? 3 Best ETFs to Protect You Now",
+          "published": "2026-02-24 19:36"
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "position": 20,
+      "avg_price": 258.3343,
+      "entry_date": "2026-03-19",
+      "currency": "USD",
+      "market": "US",
+      "notes": "",
+      "current_price": 248.9600067138672,
+      "score": 11.2,
+      "pnl_pct": -0.036287451128761444,
+      "pnl_value": -187.48586572265594,
+      "metrics": {
+        "symbol": "AAPL",
+        "price": 248.9600067138672,
+        "momentum_1m": -0.058218267578257356,
+        "volume_ratio": 0.8826279028903701,
+        "macd_hist": -1.389047767825025,
+        "atr": 5.2949981689453125,
+        "score": 11.2
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Family Manage LLC Initiates 15.58 Million Position in TCW Flexible Income ETF, According to Recent SEC Filing",
+          "summary": "The TCW Flexible Income ETF gives investors access to higher-yielding areas of the bond market through active positioning across credit and global sectors. Its appeal often comes from the potential to generate more income than traditional core bond funds, with results closely tied to how effectively the portfolio is positioned as market conditions evolve.",
+          "published": "2026-03-19 20:45"
+        },
+        {
+          "title": "Calydon Capital Dumps $9 Million of ZoomInfo Amid Stock's 92% Decline Since 2021",
+          "summary": "ZoomInfo Technologies offers cloud-based data and workflow tools for sales, marketing, and recruiting teams across diverse industries.",
+          "published": "2026-03-19 19:33"
+        },
+        {
+          "title": "These Tech Stocks Are Still a Buy for Many People Even as Iran War Pullback Intensifies",
+          "summary": "Retail investors are cherry picking which companies to buy, as they spend less money overall, according to a new J.P. Morgan report.",
+          "published": "2026-03-19 19:27"
+        }
+      ]
+    },
+    {
+      "symbol": "9988.HK",
+      "position": 100,
+      "avg_price": 163.354646,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "current_price": 132.0,
+      "score": 19.31,
+      "pnl_pct": -0.19194217469639646,
+      "pnl_value": -3135.4646000000002,
+      "metrics": {
+        "symbol": "9988.HK",
+        "price": 132.0,
+        "momentum_1m": -0.1505791172171581,
+        "volume_ratio": 1.2577129156306857,
+        "macd_hist": 0.7139193985626884,
+        "atr": 5.449999128069196,
+        "score": 19.31
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Stock Market Today, March 19: Brent Crude's $119 Spike Rattles Markets",
+          "summary": "On March 19, 2026, gold’s slide pulls on Newmont, and oil shocks ripple through an already risk‑averse U.S. market.",
+          "published": "2026-03-19 21:39"
+        },
+        {
+          "title": "Alibaba stock falls despite AI outlook, Elliott takes Align stake",
+          "summary": "Yahoo Finance Markets and Data Editor Jared Blikre and Market Catalysts host Julie Hyman take a closer look at some of Thursday morning's trending tickers and stories. Alibaba (BABA) stock is plunging after the company reported revenue that fell short of expectations, though analysts are still bullish on Alibaba's artificial intelligence (AI) outlook. Elliott Investment Management is building a stake in Invisalign-maker Align Technology (ALGN).",
+          "published": "2026-03-19 21:29"
+        },
+        {
+          "title": "Alibaba Stock Falls As Revenue Misses Estimates, Profits Slide Despite AI Growth",
+          "summary": "Alibaba Group stock fell Thursday after the Chinese tech giant reported fiscal third-quarter revenue below expectations and a sharp drop in earnings.  The rising costs of Alibaba's expansion into food delivery overshadowed momentum for its AI offerings.  Alibaba said that it earned an adjusted 7.09 yuan per American depositary receipt for the December-ended quarter, down 67% from a year earlier.",
+          "published": "2026-03-19 19:09"
+        }
+      ]
+    },
+    {
+      "symbol": "9696.HK",
+      "position": 200,
+      "avg_price": 57.301629,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "current_price": 40.02000045776367,
+      "score": 7.89,
+      "pnl_pct": -0.3015905279453107,
+      "pnl_value": -3456.3257084472652,
+      "metrics": {
+        "symbol": "9696.HK",
+        "price": 40.02000045776367,
+        "momentum_1m": -0.06495324366477259,
+        "volume_ratio": 0.6775019507032338,
+        "macd_hist": -0.13634872386842378,
+        "atr": 1.9985708509172713,
+        "score": 7.89
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Asian Market Insights: Anhui Jinhe IndustrialLtd And Two Other Stocks Estimated Below Fair Value",
+          "summary": "As global markets navigate a period of economic uncertainty, the Asian stock market presents unique opportunities for discerning investors. With interest rates being adjusted across major economies and concerns about technology valuations impacting indices, identifying stocks that are estimated to be below their fair value can offer potential benefits. In this context, understanding what makes a stock undervalued—such as strong fundamentals or growth potential not yet reflected in its...",
+          "published": "2025-12-19 04:37"
+        },
+        {
+          "title": "Asian Stocks Estimated To Be Trading Below Fair Value In December 2025",
+          "summary": "As global markets navigate a period of fluctuating interest rates and economic uncertainties, Asian stocks have drawn attention for their potential value amid these shifts. In this context, identifying undervalued stocks becomes crucial as investors seek opportunities that may offer resilience and growth in the evolving market landscape.",
+          "published": "2025-12-18 22:34"
+        },
+        {
+          "title": "Asian Value Stocks That Might Be Trading Below Their Estimated Worth",
+          "summary": "As global markets navigate the complexities of shifting interest rates and economic uncertainties, Asia's financial landscape presents intriguing opportunities for investors seeking value. In this environment, identifying stocks that may be trading below their estimated worth requires a keen understanding of market fundamentals and an eye for potential growth amidst prevailing challenges.",
+          "published": "2025-12-15 04:37"
+        }
+      ]
+    },
+    {
+      "symbol": "3968.HK",
+      "position": 1500,
+      "avg_price": 46.959501,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "current_price": 48.880001068115234,
+      "score": 18.0,
+      "pnl_pct": 0.04089694369016467,
+      "pnl_value": 2880.750102172847,
+      "metrics": {
+        "symbol": "3968.HK",
+        "price": 48.880001068115234,
+        "momentum_1m": 0.0016393818095376345,
+        "volume_ratio": 1.1742623526549485,
+        "macd_hist": 0.04057774131508472,
+        "atr": 1.0250001634870256,
+        "score": 18.0
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Visa Enables Apple Pay Support for Chinese Visa Cardholders",
+          "summary": "Visa Inc. (NYSE:V) is one of the 15 Best S&amp;P 500 Stocks to Look For in 2026. On January 15, Visa Inc. (NYSE:V) announced that it has enabled Apple Pay support for Chinese Visa cardholders. Eligible customers from the partnering Chinese banks will be allowed to add their Visa cards to Apple Pay and make […]",
+          "published": "2026-01-22 18:08"
+        },
+        {
+          "title": "Thunes and UnionPay International Launch Instant Money Transfers to China's mainland",
+          "summary": "Thunes, the Smart Superhighway to move money around the world, today announces the launch of faster, more reliable, and more transparent payments into China's mainland following a deepened collaboration with UnionPay International (UPI).",
+          "published": "2026-01-22 08:00"
+        },
+        {
+          "title": "Mercuria Successfully Closes USD 2.3 Billion Equivalent Asian Revolving Credit Facilities",
+          "summary": "Mercuria Energy Group Ltd. (\"Mercuria\") is pleased to announce the successful closing of its 2025 Asian Syndicated Revolving Credit Facilities (the \"Facilities\"), totaling over USD 2.3 billion equivalent across USD and CNH tranches.",
+          "published": "2025-11-24 08:55"
+        }
+      ]
+    },
+    {
+      "symbol": "2600.HK",
+      "position": 2000,
+      "avg_price": 11.571569,
+      "entry_date": "2026-03-19",
+      "currency": "HKD",
+      "market": "HK",
+      "notes": "",
+      "current_price": 11.489999771118164,
+      "score": 18.23,
+      "pnl_pct": -0.007049107072846919,
+      "pnl_value": -163.1384577636723,
+      "metrics": {
+        "symbol": "2600.HK",
+        "price": 11.489999771118164,
+        "momentum_1m": -0.0938486203010482,
+        "volume_ratio": 1.4343277533868681,
+        "macd_hist": -0.2621513400128257,
+        "atr": 0.8500000408717564,
+        "score": 18.23
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Aluminum Extrusion Market worth $166.65 billion by 2030, at a CAGR of 7.0%, says MarketsandMarkets™",
+          "summary": "Delray Beach, FL, Feb. 25, 2026 (GLOBE NEWSWIRE) -- The Aluminum Extrusion Market is estimated to be USD 111.88 billion in 2024 and is projected to reach USD 166.65 billion by 2030, at a CAGR of 7.0%, as per the recent study by MarketsandMarkets™. The demand for aluminum extruded products is on the rise due to the growing need in various applications in the construction & infrastructure, automotive & mass transport, electrical & electronics, machinery & equipment, and other end-use industries. T",
+          "published": "2026-02-25 14:00"
+        },
+        {
+          "title": "Chalco’s Brazilian Deal Expands Global Reach And Raises Valuation Questions",
+          "summary": "Aluminum Corporation of China (SEHK:2600), known as Chalco, and Rio Tinto have jointly acquired a controlling stake in Companhia Brasileira de Alumínio. The deal gives Chalco significant influence over a major Brazilian aluminum producer and marks the company’s largest outbound investment to date. This move expands Chalco’s overseas footprint and increases its role in the global aluminum supply chain. For investors watching SEHK:2600, this transaction comes with the stock at HK$13.85 and...",
+          "published": "2026-02-02 04:28"
+        },
+        {
+          "title": "Basic Materials Roundup: Market Talk",
+          "summary": "BUSINESS  The latest Market Talks covering Basic Materials. Published exclusively on Dow Jones Newswires at 4:20 ET, 12:20 ET and 16:50 ET.  0338 ET – Shares in London-listed miners fall as the price of silver declines and metal markets continue to experience rising volatility.",
+          "published": "2026-01-30 22:03"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "symbol": "PLTR",
+      "metrics": {
+        "symbol": "PLTR",
+        "price": 155.67999267578125,
+        "momentum_1m": 0.14994819811493437,
+        "volume_ratio": 0.6755279459585908,
+        "macd_hist": 1.4649600698859784,
+        "atr": 6.318287440708706,
+        "score": 27.1
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "NVIDIA and Palantir Cool Off in 2026: Concerning?",
+          "summary": "The outlooks for both NVIDIA and Palantir remain robust despite some softness in share performance YTD, perhaps setting up a nice opportunity for those seeking exposure.",
+          "published": "2026-03-19 19:51"
+        },
+        {
+          "title": "Palantir Gains as Mizuho Reiterates Outperform",
+          "summary": "Analyst maintains $195 price target after executive meeting",
+          "published": "2026-03-19 18:44"
+        },
+        {
+          "title": "Why More Retirees Are Allocating 5% – 10% to Angel Investing On Top of Dividend Stocks",
+          "summary": "With dividend income continuing to play a central role in retirement portfolios, a growing number of retirees, particularly high-net-worth investors are beginning to allocate 5% to 10% of their portfolios to angel investing. Rather than moving away from traditional strategies, this shift reflects a complementary approach: maintaining reliable income through dividend stocks while selectively adding […]",
+          "published": "2026-03-19 15:34"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "metrics": {
+        "symbol": "AMD",
+        "price": 205.27000427246094,
+        "momentum_1m": 0.0257346056412687,
+        "volume_ratio": 0.9151575982486583,
+        "macd_hist": 1.1745967056763984,
+        "atr": 8.705000741141182,
+        "score": 24.02
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Samsung to Invest $73B in AI Chip Push",
+          "summary": "Spending targets leadership in high-bandwidth memory and next-gen technologies",
+          "published": "2026-03-19 18:46"
+        },
+        {
+          "title": "AMD vs. Broadcom: Which Semiconductor Stock is a Buy Right Now?",
+          "summary": "AVGO's AI revenue surge and strong hyperscaler demand outshine AMD's near-term headwinds, positioning AVGO as a stronger AI infrastructure play.",
+          "published": "2026-03-19 17:19"
+        },
+        {
+          "title": "Micron Slips 4%: NVIDIA’s HBM Supplier Just Posted Record Results, So Why Is It Falling?",
+          "summary": "Micron Technology (NASDAQ:MU) is down 4% in Thursday trading, with shares sliding to $445 from a prior close of $461.73. That’s a head-scratcher on the surface, because last night Micron posted what CEO Sanjay Mehrotra called record results across the board. Here’s the paradox: the numbers were genuinely exceptional, the guidance was even better, and ... Micron Slips 4%: NVIDIA’s HBM Supplier Just Posted Record Results, So Why Is It Falling?",
+          "published": "2026-03-19 17:10"
+        }
+      ]
+    },
+    {
+      "symbol": "AMZN",
+      "metrics": {
+        "symbol": "AMZN",
+        "price": 208.75999450683594,
+        "momentum_1m": 0.01938571878927812,
+        "volume_ratio": 0.7738918499568596,
+        "macd_hist": 0.5673443837605219,
+        "atr": 5.512141636439732,
+        "score": 16.83
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Nvidia to sell 1 million chips to Amazon by end of 2027 in cloud deal",
+          "summary": "Nvidia will sell 1 million of its graphics processing unit chips, along with a host of ‌the AI giant's other offerings, to Amazon.com's cloud computing unit by 2027, ‌a Nvidia executive told Reuters on Thursday.  Nvidia and Amazon Web Services said this week that AWS had ​reached a deal to buy its 1 million GPUs but had not disclosed the precise timing of the deal.  Ian Buck, vice president of hyperscale and high-performance computing at Nvidia, told Reuters on Thursday that the sales would start this year and ‌extend through 2027.",
+          "published": "2026-03-19 21:31"
+        },
+        {
+          "title": "Jeff Bezos Readies $100B Fund to Automate Manufacturing Companies: WSJ",
+          "summary": "Bezos is wooing Middle Eastern royalty and Asian financial giants to invest in his automated empire.",
+          "published": "2026-03-19 20:39"
+        },
+        {
+          "title": "Anthony Scaramucci Backs Michael Saylor's Preferred Stock Bet: 'This Is His iPhone Moment...Has Set The Clock On Global Adoption'",
+          "summary": "Anthony Scaramucci, the founder and managing partner of SkyBridge Capital, labeled Strategy Inc.‘s preferred stock issuance an “iPhone moment” that would trigger widespread Bitcoin adoption. Setting The ‘Clock On Global Adoption’ In an X post, Scaramucci said that Strategy’s high-yield...",
+          "published": "2026-03-19 20:31"
+        }
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "metrics": {
+        "symbol": "TSM",
+        "price": 338.7900085449219,
+        "momentum_1m": -0.06478772314914845,
+        "volume_ratio": 1.138079179951895,
+        "macd_hist": -3.0191737448196028,
+        "atr": 12.649998256138392,
+        "score": 14.8
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "KLA Rival Calibrates New Buy Zone As Top Funds Scoop Up Shares",
+          "summary": "The semiconductor equipment group ranks a stellar No. 3 among the 197 groups Investor's Business Daily tracks and features industry powerhouses like Advanced Energy Industries and ASML. Metrology leader Nova has also etched its name on that list as Nova stock calibrates a new buy point.",
+          "published": "2026-03-19 20:10"
+        },
+        {
+          "title": "Bank of America Securities Reiterates a Buy Rating on Taiwan Semiconductor Manufacturing Company (TSM) Stock",
+          "summary": "Taiwan Semiconductor Manufacturing Company Limited (NYSE:TSM) is one of the Best Semiconductor Stocks to Invest In Now. On March 10, Haas Liu from Bank of America Securities reiterated a “Buy” rating on the company’s stock with a price objective of $470.00. The analyst’s rating is backed by factors that reflect resilient growth and earnings power. While the […]",
+          "published": "2026-03-19 15:44"
+        },
+        {
+          "title": "Long-only funds are buying non-US stocks, BofA says",
+          "summary": "Investing.com -- Long-only investors shifted decisively toward non-U.S. equities in February, according to a new note from Bank of America.",
+          "published": "2026-03-19 15:39"
+        }
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "metrics": {
+        "symbol": "TSLA",
+        "price": 380.29998779296875,
+        "momentum_1m": -0.07541578084918876,
+        "volume_ratio": 1.1240154724874394,
+        "macd_hist": -0.42622885978010316,
+        "atr": 13.162142072405134,
+        "score": 14.22
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Dow Jones Futures: Stocks Slash Losses, Oil Prices Fall Amid Trump, Netanyahu Iran War Comments",
+          "summary": "Stocks came off 2026 lows and oil prices reversed lower amid Iran war comments from President Trump and Israeli PM Netanyahu. Tesla stock broke key levels.",
+          "published": "2026-03-19 21:40"
+        },
+        {
+          "title": "Stock Market Today, March 19: Rivian Jumps After Partnering With Uber on $1.25 Billion Robotaxi Investment Plan",
+          "summary": "Rivian’s place in Uber’s long‑term robotaxi rollout puts scale, autonomy, and future margins in sharp focus, today, March 19, 2026.",
+          "published": "2026-03-19 21:19"
+        },
+        {
+          "title": "Elon Musk's 'DOGEfather' meme fails to lift memecoin",
+          "summary": "The world's wealthiest individual, Elon Musk, is well-known for his leadership of Tesla, SpaceX, X (formerly Twitter), and xAI. The tech tycoon has also hailed cryptocurrencies and once used to talk or share posts about Dogecoin (DOGE) quite often. Launched in December 2013, Dogecoin is ...",
+          "published": "2026-03-19 21:05"
+        }
+      ]
+    },
+    {
+      "symbol": "ASML",
+      "metrics": {
+        "symbol": "ASML",
+        "price": 1366.3900146484375,
+        "momentum_1m": -0.06967288393695549,
+        "volume_ratio": 1.0593586101873256,
+        "macd_hist": -6.456482685215353,
+        "atr": 53.90931919642857,
+        "score": 13.45
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "KLA Rival Calibrates New Buy Zone As Top Funds Scoop Up Shares",
+          "summary": "The semiconductor equipment group ranks a stellar No. 3 among the 197 groups Investor's Business Daily tracks and features industry powerhouses like Advanced Energy Industries and ASML. Metrology leader Nova has also etched its name on that list as Nova stock calibrates a new buy point.",
+          "published": "2026-03-19 20:10"
+        },
+        {
+          "title": "Long-only funds are buying non-US stocks, BofA says",
+          "summary": "Investing.com -- Long-only investors shifted decisively toward non-U.S. equities in February, according to a new note from Bank of America.",
+          "published": "2026-03-19 15:39"
+        },
+        {
+          "title": "ASML Holding N.V. (ASML) is Attracting Investor Attention: Here is What You Should Know",
+          "summary": "Recently, Zacks.com users have been paying close attention to ASML (ASML). This makes it worthwhile to examine what the stock has in store.",
+          "published": "2026-03-19 13:00"
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "metrics": {
+        "symbol": "META",
+        "price": 606.7000122070312,
+        "momentum_1m": -0.05677677957693474,
+        "volume_ratio": 1.0218841742204865,
+        "macd_hist": -4.260618785682268,
+        "atr": 18.340702601841517,
+        "score": 13.34
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Anthony Scaramucci Backs Michael Saylor's Preferred Stock Bet: 'This Is His iPhone Moment...Has Set The Clock On Global Adoption'",
+          "summary": "Anthony Scaramucci, the founder and managing partner of SkyBridge Capital, labeled Strategy Inc.‘s preferred stock issuance an “iPhone moment” that would trigger widespread Bitcoin adoption. Setting The ‘Clock On Global Adoption’ In an X post, Scaramucci said that Strategy’s high-yield...",
+          "published": "2026-03-19 20:31"
+        },
+        {
+          "title": "213-year-old bank cuts Gemini stock target 60% ahead of earnings",
+          "summary": "Early this week, Citigroup (NYSE: C) lowered its 12-month price targets for both Bitcoin (BTC) and Ethereum (ETH) due to the delay in the legislative process regarding crypto assets in the United States. Next, the 213-year-old Wall Street banking giant lowered the price targets ...",
+          "published": "2026-03-19 20:22"
+        },
+        {
+          "title": "Meta Platforms Just Delivered Incredible News to This AI Data Center Company",
+          "summary": "Meta Platforms is a hyperscaler that contributes to building AI infrastructure.",
+          "published": "2026-03-19 20:20"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "metrics": {
+        "symbol": "NVDA",
+        "price": 178.55999755859375,
+        "momentum_1m": -0.050111705410392685,
+        "volume_ratio": 0.8542378445126679,
+        "macd_hist": -0.3985699480822342,
+        "atr": 5.508927481515067,
+        "score": 11.06
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "1 Inflation-Resistant Stock to Buy and Hold Forever",
+          "summary": "Rising prices won't rattle this company's business.",
+          "published": "2026-03-19 21:35"
+        },
+        {
+          "title": "Nvidia to sell 1 million chips to Amazon by end of 2027 in cloud deal",
+          "summary": "Nvidia will sell 1 million of its graphics processing unit chips, along with a host of ‌the AI giant's other offerings, to Amazon.com's cloud computing unit by 2027, ‌a Nvidia executive told Reuters on Thursday.  Nvidia and Amazon Web Services said this week that AWS had ​reached a deal to buy its 1 million GPUs but had not disclosed the precise timing of the deal.  Ian Buck, vice president of hyperscale and high-performance computing at Nvidia, told Reuters on Thursday that the sales would start this year and ‌extend through 2027.",
+          "published": "2026-03-19 21:31"
+        },
+        {
+          "title": "Carvana Stock: Down About 35% in 2026, Is It Finally Time to Buy?",
+          "summary": "The used-car retailer is posting record revenue and units sold, but a contracting profit margin may have some investors hitting the brakes.",
+          "published": "2026-03-19 21:23"
+        }
+      ]
+    },
+    {
+      "symbol": "AVGO",
+      "metrics": {
+        "symbol": "AVGO",
+        "price": 319.8399963378906,
+        "momentum_1m": -0.04098831527527768,
+        "volume_ratio": 0.8050184284052505,
+        "macd_hist": -1.2072074076993553,
+        "atr": 13.207863943917411,
+        "score": 10.64
+      },
+      "analysis": {
+        "sentiment": "中性",
+        "short_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "long_term_view": "未設定 OPENAI_API_KEY，略過分析",
+        "risks": [
+          "API key missing"
+        ],
+        "action_label": "watch",
+        "confidence": 20
+      },
+      "news": [
+        {
+          "title": "Broadcom Just Shipped the World’s First Quantum-Safe Network Encryption — 3 Reasons AVGO Investors Should Pay Attention",
+          "summary": "Broadcom (NASDAQ:AVGO) quietly crossed a significant threshold this week, shipping what it describes as the world’s first quantum-safe network encryption solution for enterprise infrastructure. For long-term AVGO shareholders, the timing and context of this launch deserve attention beyond the headline. What Is Quantum-Safe Encryption and Why Does It Matter Now Post-quantum cryptography (PQC) addresses a ... Broadcom Just Shipped the World’s First Quantum-Safe Network Encryption — 3 Reasons AVGO",
+          "published": "2026-03-19 18:54"
+        },
+        {
+          "title": "Top Analyst Calls Micron Pullback a 'Prime Buying Opportunity'",
+          "summary": "Micron Earnings Beat Expectations. Analyst Says Investors Should Buy the Dip",
+          "published": "2026-03-19 18:47"
+        },
+        {
+          "title": "5 Dividend Growth Stocks to Buy Amid Rising Inflation Risk",
+          "summary": "ADI and peers emerge as dividend-growth picks as sticky inflation and rate uncertainty push investors toward resilient, cash-rich companies.",
+          "published": "2026-03-19 17:23"
+        }
+      ]
+    }
+  ]
+}
