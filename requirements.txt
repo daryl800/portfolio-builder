@@ -1,0 +1,6 @@
+openai
+python-dotenv
+yfinance
+feedparser
+requests
+pandas
