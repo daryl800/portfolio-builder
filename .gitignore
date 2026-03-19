@@ -44,4 +44,4 @@ data/cache/
 
 # Optional: ignore generated reports if you don't want them in git
 output/
-
+data/
