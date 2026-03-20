@@ -5,3 +5,4 @@ pandas
 openai
 feedparser
 requests
+dashscope

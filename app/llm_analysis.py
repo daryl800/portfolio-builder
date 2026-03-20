@@ -1,20 +1,127 @@
 # llm_analysis.py
 import json
+import time
+from typing import Iterable, Dict, List, Optional, Union
+import dashscope
 from openai import OpenAI
-from app.config import OPENAI_API_KEY, OPENAI_MODEL
+from app.config import (
+    OPENAI_API_KEY, 
+    OPENAI_MODEL,
+    QWEN_API_KEY,
+    QWEN_MODEL,
+    LLM_PROVIDER,  # "openai" or "qwen"
+    QWEN_USE_DASHSCOPE_SDK  # Set to True to use dashscope SDK, False to use OpenAI-compatible endpoint
+)
 from app.models import LLMAnalysis, NewsItem
 
-client = OpenAI(api_key=OPENAI_API_KEY)
+# Initialize OpenAI client (always, in case we need it)
+openai_client = None
+if OPENAI_API_KEY:
+    openai_client = OpenAI(api_key=OPENAI_API_KEY)
+
+# Initialize dashscope for QWEN
+if QWEN_API_KEY:
+    dashscope.api_key = QWEN_API_KEY
 
 LLM_CALL_COUNT = 0
 
+class QwenDashscopeWrapper:
+    """Wrapper for dashscope SDK to match OpenAI's interface pattern."""
+    
+    def __init__(self, api_key: str, model: str):
+        dashscope.api_key = api_key
+        self.model = model
+    
+    def chat_completions_create(self, **kwargs):
+        """Convert OpenAI-style call to dashscope call."""
+        messages = kwargs.get("messages", [])
+        temperature = kwargs.get("temperature", 0.2)
+        max_tokens = kwargs.get("max_tokens", 1500)
+        
+        # Extract system and user messages
+        system_content = ""
+        user_content = ""
+        
+        for msg in messages:
+            if msg["role"] == "system":
+                system_content = msg["content"]
+            elif msg["role"] == "user":
+                user_content = msg["content"]
+        
+        # Combine prompts
+        full_prompt = system_content + "\n\n" + user_content if system_content else user_content
+        
+        # Call dashscope
+        response = dashscope.Generation.call(
+            model=self.model,
+            prompt=full_prompt,
+            temperature=temperature,
+            max_tokens=max_tokens,
+            result_format='message'  # Get response in message format
+        )
+        
+        return response
+
+def get_client_and_model():
+    """Get the appropriate client and model based on LLM_PROVIDER setting."""
+    if LLM_PROVIDER == "qwen":
+        if not QWEN_API_KEY:
+            raise ValueError("QWEN_API_KEY not set but LLM_PROVIDER is 'qwen'")
+        
+        # Check if we should use dashscope SDK or OpenAI-compatible endpoint
+        if QWEN_USE_DASHSCOPE_SDK:
+            # Return a wrapper that mimics OpenAI's interface
+            return QwenDashscopeWrapper(QWEN_API_KEY, QWEN_MODEL), QWEN_MODEL
+        else:
+            # Use OpenAI client with QWEN's OpenAI-compatible endpoint
+            qwen_client = OpenAI(
+                api_key=QWEN_API_KEY,
+                base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
+            )
+            return qwen_client, QWEN_MODEL
+    else:  # default to openai
+        if not openai_client:
+            raise ValueError("OPENAI_API_KEY not set but LLM_PROVIDER is 'openai'")
+        return openai_client, OPENAI_MODEL
+
+def call_llm(client, model, messages, temperature=0.2, max_tokens=1500):
+    """Unified LLM call function that works with both OpenAI and dashscope."""
+    
+    if isinstance(client, QwenDashscopeWrapper):
+        # Using dashscope SDK
+        response = client.chat_completions_create(
+            messages=messages,
+            temperature=temperature,
+            max_tokens=max_tokens
+        )
+        
+        # Extract content from dashscope response
+        if hasattr(response, 'output') and hasattr(response.output, 'choices'):
+            return response.output.choices[0].message.content
+        elif hasattr(response, 'output') and hasattr(response.output, 'text'):
+            return response.output.text
+        else:
+            return str(response)
+    else:
+        # Using OpenAI client
+        response = client.chat.completions.create(
+            model=model,
+            temperature=temperature,
+            messages=messages,
+            max_tokens=max_tokens
+        )
+        return response.choices[0].message.content.strip()
 
 def analyze_stock_news(symbol: str, news_list: list[NewsItem]) -> LLMAnalysis:
-    if not OPENAI_API_KEY:
+    # Check if any API key is available
+    has_api_key = (LLM_PROVIDER == "qwen" and QWEN_API_KEY) or (LLM_PROVIDER != "qwen" and OPENAI_API_KEY)
+    
+    if not has_api_key:
+        provider = LLM_PROVIDER if LLM_PROVIDER else "openai"
         return LLMAnalysis(
             sentiment="中性",
-            short_term_view="未設定 OPENAI_API_KEY，略過分析",
-            long_term_view="未設定 OPENAI_API_KEY，略過分析",
+            short_term_view=f"未設定 {provider.upper()}_API_KEY，略過分析",
+            long_term_view="未設定 API key，略過分析",
             risks=["API key missing"],
             action_label="watch",
             confidence=20,
@@ -46,19 +153,26 @@ JSON schema:
     try:
         global LLM_CALL_COUNT
         LLM_CALL_COUNT += 1
+        client, model = get_client_and_model()
+        
         print(
-            f"[LLM] call #{LLM_CALL_COUNT} - single - symbol={symbol}",
+            f"[LLM] call #{LLM_CALL_COUNT} - single - provider={LLM_PROVIDER} - model={model} - symbol={symbol}",
             flush=True,
         )
-        resp = client.chat.completions.create(
-            model=OPENAI_MODEL,
-            temperature=0.2,
-            messages=[
-                {"role": "system", "content": "You are a careful financial research assistant. Reply in Traditional Chinese and valid JSON only."},
-                {"role": "user", "content": prompt},
-            ],
-        )
-        content = resp.choices[0].message.content.strip()
+        
+        messages = [
+            {"role": "system", "content": "You are a careful financial research assistant. Reply in Traditional Chinese and valid JSON only."},
+            {"role": "user", "content": prompt},
+        ]
+        
+        content = call_llm(client, model, messages, temperature=0.2)
+        
+        # Handle potential markdown code blocks in response
+        if content.startswith("```json"):
+            content = content.replace("```json", "").replace("```", "").strip()
+        elif content.startswith("```"):
+            content = content.replace("```", "").strip()
+            
         data = json.loads(content)
         return LLMAnalysis(
             sentiment=data.get("sentiment", "中性"),
@@ -77,13 +191,6 @@ JSON schema:
             action_label="watch",
             confidence=10,
         )
-    
-##########################################################
-    
-from collections import defaultdict
-from typing import Iterable, Dict, List, Tuple
-
-from app.models import LLMAnalysis, NewsItem
 
 def analyze_stock_news_batch(
     items: Iterable[tuple[str, list[NewsItem]]]
@@ -98,13 +205,16 @@ def analyze_stock_news_batch(
     if not items:
         return {}
 
-    if not OPENAI_API_KEY:
-        # 沒 API key 時，全部回 fallback，和單檔版一致
+    # Check if any API key is available
+    has_api_key = (LLM_PROVIDER == "qwen" and QWEN_API_KEY) or (LLM_PROVIDER != "qwen" and OPENAI_API_KEY)
+    
+    if not has_api_key:
+        provider = LLM_PROVIDER if LLM_PROVIDER else "openai"
         return {
             symbol: LLMAnalysis(
                 sentiment="中性",
-                short_term_view="未設定 OPENAI_API_KEY，略過分析",
-                long_term_view="未設定 OPENAI_API_KEY，略過分析",
+                short_term_view=f"未設定 {provider.upper()}_API_KEY，略過分析",
+                long_term_view="未設定 API key，略過分析",
                 risks=["API key missing"],
                 action_label="watch",
                 confidence=20,
@@ -160,26 +270,32 @@ JSON schema 範例：
     try:
         global LLM_CALL_COUNT
         LLM_CALL_COUNT += 1
+        client, model = get_client_and_model()
+        
         print(
-            f"[LLM] call #{LLM_CALL_COUNT} - batch - symbols={[s for s, _ in items]}",
+            f"[LLM] call #{LLM_CALL_COUNT} - batch - provider={LLM_PROVIDER} - model={model} - symbols={[s for s, _ in items]}",
             flush=True,
         )
 
-        resp = client.chat.completions.create(
-            model=OPENAI_MODEL,
-            temperature=0.2,
-            messages=[
-                {
-                    "role": "system",
-                    "content": (
-                        "You are a careful financial research assistant. "
-                        "Reply in Traditional Chinese and valid JSON only."
-                    ),
-                },
-                {"role": "user", "content": prompt},
-            ],
-        )
-        content = resp.choices[0].message.content.strip()
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "You are a careful financial research assistant. "
+                    "Reply in Traditional Chinese and valid JSON only."
+                ),
+            },
+            {"role": "user", "content": prompt},
+        ]
+        
+        content = call_llm(client, model, messages, temperature=0.2)
+        
+        # Handle potential markdown code blocks in response
+        if content.startswith("```json"):
+            content = content.replace("```json", "").replace("```", "").strip()
+        elif content.startswith("```"):
+            content = content.replace("```", "").strip()
+            
         data = json.loads(content)
 
         # 轉成 {symbol: LLMAnalysis}
@@ -225,4 +341,3 @@ JSON schema 範例：
             )
             for symbol, _ in items
         }
-
