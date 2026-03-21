@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+import platform
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -35,8 +36,21 @@ OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-3.5-turbo")
 QWEN_API_KEY = os.getenv("QWEN_API_KEY", "")
 QWEN_MODEL = os.getenv("QWEN_MODEL", "qwen-turbo")  # or qwen-plus, qwen-max
 
+# MetaSota Configuration
+METASOTA_API_KEY = os.getenv("METASOTA_API_KEY", "")
+METASOTA_MODEL = os.getenv("METASOTA_MODEL", "metasota-1")  # Use the actual model name from MetaSota
+METASOTA_BASE_URL = os.getenv("METASOTA_BASE_URL", "https://api.metasota.ai/v1")
+
 # LLM Provider switch: "openai" or "qwen"
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai")  # default to openai
 
 # Set to True to use dashscope SDK directly, False to use OpenAI-compatible endpoint
 QWEN_USE_DASHSCOPE_SDK = os.getenv("QWEN_USE_DASHSCOPE_SDK", "False").lower() == "true"  # Default to False to avoid dashscope requirement
+
+# Determine PROJECT_DIR based on OS
+if platform.system() == "Darwin":  # macOS
+    PROJECT_DIR = Path.home() / "develop/portfolio-builder"
+elif platform.system() == "Linux":
+    PROJECT_DIR = Path.home() / "Apps/portfolio-builder"
+else:  # fallback for other OS (Windows, etc.)
+    PROJECT_DIR = Path.home() / "portfolio-builder"  # or whatever default you want
