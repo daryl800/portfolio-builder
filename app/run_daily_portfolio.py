@@ -8,22 +8,18 @@ import sys
 
 from app import s1_convert_ib_portfolio, s2_build_daily_portfolio, s3_build_openclaw_input
 from app.config import (
-    DAILY_PORTFOLIO_OC_INPUT,
     VPS_USER,
     VPS_HOST,
     VPS_TARGET_PATH,
 )
 
-
 ROOT = Path(__file__).resolve().parent.parent
-
 
 def run_scp(src: Path, dest: str) -> None:
     cmd = ["scp", str(src), dest]
     print(f"[RUN] SCP: {' '.join(cmd)}")
     subprocess.check_call(cmd)
     print("[RUN] SCP done")
-
 
 def main() -> None:
     # 1) S1: IB export -> input/holdings.csv
@@ -36,7 +32,7 @@ def main() -> None:
 
     # 3) S3: snapshot -> full profile + Telegram + data/daily_portfolio_openclaw_input.json
     print("[RUN] Step 3: build full profile & OpenClaw input + Telegram")
-    oc_input_path = s3_build_openclaw_input.main()  # 回傳 DAILY_PORTFOLIO_OC_INPUT
+    oc_input_path = s3_build_openclaw_input.main()  
 
     # 4) 加 timestamp 本地留存一份，並 scp 一份固定檔名到 VPS
     ts = datetime.now().strftime("%Y%m%d_%H%M")

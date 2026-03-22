@@ -1,8 +1,6 @@
-# llm_analysis.py
+# llm_analysis.py - With MetaSota Support and Provider Logging
 import json
-import os
 import re
-import time
 from typing import Iterable, Dict, List, Optional, Union
 import dashscope
 from openai import OpenAI
@@ -19,17 +17,17 @@ from app.config import (
 )
 from app.models import LLMAnalysis, NewsItem
 
-# Initialize clients with None defaults
+# Initialize clients (without timeout/max_retries in constructor)
 openai_client = None
 metasota_client = None
 
 # Initialize OpenAI client
 if OPENAI_API_KEY:
     try:
-        openai_client = OpenAI(api_key=OPENAI_API_KEY, timeout=30.0, max_retries=2)
-        print(f"[OpenAI] Client initialized successfully", flush=True)
+        openai_client = OpenAI(api_key=OPENAI_API_KEY)
+        print(f"[OpenAI] Client initialized", flush=True)
     except Exception as e:
-        print(f"[OpenAI] Failed to initialize client: {e}", flush=True)
+        print(f"[OpenAI] Failed to initialize: {e}", flush=True)
 
 # Initialize dashscope for QWEN
 if QWEN_API_KEY:
@@ -39,28 +37,20 @@ if QWEN_API_KEY:
     except Exception as e:
         print(f"[Qwen] Failed to initialize: {e}", flush=True)
 
-# Initialize MetaSota client with the working configuration
+# Initialize MetaSota client
 if METASOTA_API_KEY:
     try:
-        # Use the working base URL from your test
         metasota_base_url = METASOTA_BASE_URL if METASOTA_BASE_URL else "https://metaso.cn/api/v1"
-        print(f"[MetaSota] Initializing client with base URL: {metasota_base_url}", flush=True)
         metasota_client = OpenAI(
             api_key=METASOTA_API_KEY,
-            base_url=metasota_base_url,
-            timeout=30.0,
-            max_retries=2
+            base_url=metasota_base_url
         )
-        print(f"[MetaSota] Client initialized successfully", flush=True)
+        print(f"[MetaSota] Client initialized with base URL: {metasota_base_url}", flush=True)
     except Exception as e:
-        print(f"[MetaSota] Failed to initialize client: {e}", flush=True)
+        print(f"[MetaSota] Failed to initialize: {e}", flush=True)
         metasota_client = None
 
 LLM_CALL_COUNT = 0
-
-def clean_metasota_response(content: str) -> str:
-    """Remove [[number]] patterns from MetaSota response."""
-    return re.sub(r'\[\[\d+\]\]', '', content)
 
 class QwenDashscopeWrapper:
     """Wrapper for dashscope SDK to match OpenAI's interface pattern."""
@@ -68,6 +58,7 @@ class QwenDashscopeWrapper:
     def __init__(self, api_key: str, model: str):
         dashscope.api_key = api_key
         self.model = model
+        print(f"[Qwen] Dashscope wrapper initialized with model: {model}", flush=True)
     
     def chat_completions_create(self, **kwargs):
         """Convert OpenAI-style call to dashscope call."""
@@ -100,53 +91,57 @@ class QwenDashscopeWrapper:
         return response
 
 def get_client_and_model():
+    print(f"📦 LLM_PROVIDER: {LLM_PROVIDER}")
     """Get the appropriate client and model based on LLM_PROVIDER setting."""
     if LLM_PROVIDER == "qwen":
         if not QWEN_API_KEY:
             raise ValueError("QWEN_API_KEY not set but LLM_PROVIDER is 'qwen'")
         
-        # Check if we should use dashscope SDK or OpenAI-compatible endpoint
         if QWEN_USE_DASHSCOPE_SDK:
+            print(f"[LLM Provider] Using Qwen with Dashscope SDK (model: {QWEN_MODEL})", flush=True)
             return QwenDashscopeWrapper(QWEN_API_KEY, QWEN_MODEL), QWEN_MODEL
         else:
+            print(f"[LLM Provider] Using Qwen with OpenAI-compatible endpoint (model: {QWEN_MODEL})", flush=True)
+            # Use OpenAI client with QWEN's OpenAI-compatible endpoint
             qwen_client = OpenAI(
                 api_key=QWEN_API_KEY,
-                base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
-                timeout=30.0,
-                max_retries=2
+                base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
             )
             return qwen_client, QWEN_MODEL
+    
     elif LLM_PROVIDER == "metasota":
         if not METASOTA_API_KEY:
             raise ValueError("METASOTA_API_KEY not set but LLM_PROVIDER is 'metasota'")
         
-        global metasota_client
         if not metasota_client:
-            # Re-initialize if not already done
-            try:
-                metasota_base_url = METASOTA_BASE_URL if METASOTA_BASE_URL else "https://metaso.cn/api/v1"
-                metasota_client = OpenAI(
-                    api_key=METASOTA_API_KEY,
-                    base_url=metasota_base_url,
-                    timeout=30.0,
-                    max_retries=2
-                )
-            except Exception as e:
-                raise Exception(f"Failed to initialize MetaSota client: {e}")
+            raise Exception("MetaSota client not initialized")
         
-        # Get model from config, with default "fast" for MetaSota
         model = METASOTA_MODEL if METASOTA_MODEL else "fast"
+        print(f"[LLM Provider] Using MetaSota (model: {model}, base_url: {METASOTA_BASE_URL})", flush=True)
         return metasota_client, model
+    
     else:  # default to openai
         if not openai_client:
             raise ValueError("OPENAI_API_KEY not set but LLM_PROVIDER is 'openai'")
+        print(f"[LLM Provider] Using OpenAI (model: {OPENAI_MODEL})", flush=True)
         return openai_client, OPENAI_MODEL
+
+def clean_metasota_response(content: str) -> str:
+    """Clean MetaSota response by removing [[number]] patterns."""
+    # Remove [[number]] patterns
+    cleaned = re.sub(r'\[\[\d+\]\]', '', content)
+    # Remove extra whitespace
+    cleaned = ' '.join(cleaned.split())
+    return cleaned
 
 def call_llm(client, model, messages, temperature=0.2, max_tokens=1500):
     """Unified LLM call function that works with OpenAI, dashscope, and MetaSota."""
     
+    print(f"📦 LLM_PROVIDER: {LLM_PROVIDER}")
+
     if isinstance(client, QwenDashscopeWrapper):
         # Using dashscope SDK
+        print(f"[LLM Call] Using Qwen Dashscope SDK with model: {model}", flush=True)
         response = client.chat_completions_create(
             messages=messages,
             temperature=temperature,
@@ -161,41 +156,30 @@ def call_llm(client, model, messages, temperature=0.2, max_tokens=1500):
         else:
             return str(response)
     else:
-        # Using OpenAI client (works for OpenAI, MetaSota, and Qwen's OpenAI-compatible endpoint)
-        try:
-            print(f"[call_llm] Attempting to call {LLM_PROVIDER} with model {model}", flush=True)
-            response = client.chat.completions.create(
-                model=model,
-                temperature=temperature,
-                messages=messages,
-                max_tokens=max_tokens,
-                timeout=30.0
-            )
-            content = response.choices[0].message.content.strip()
-            
-            # Clean MetaSota responses if needed
-            if LLM_PROVIDER == "metasota":
-                content = clean_metasota_response(content)
-            
-            return content
-        except Exception as e:
-            error_msg = str(e)
-            print(f"[call_llm] Error: {error_msg}", flush=True)
-            
-            if LLM_PROVIDER == "metasota":
-                if "Connection error" in error_msg or "connection" in error_msg.lower():
-                    raise Exception(f"MetaSota API connection error. Please check:\n"
-                                  f"1. Your internet connection\n"
-                                  f"2. The base URL is correct: {METASOTA_BASE_URL}\n"
-                                  f"3. Your API key is valid\n"
-                                  f"Original error: {error_msg}")
-                else:
-                    raise Exception(f"MetaSota API error: {error_msg}")
-            raise
+        # Using OpenAI client (works for OpenAI and MetaSota)
+        provider_type = "MetaSota" if LLM_PROVIDER == "metasota" else "OpenAI" if LLM_PROVIDER == "openai" else "Qwen (OpenAI-compatible)"
+        print(f"[LLM Call] Using {provider_type} with model: {model}", flush=True)
+        
+        response = client.chat.completions.create(
+            model=model,
+            temperature=temperature,
+            messages=messages,
+            max_tokens=max_tokens
+        )
+        content = response.choices[0].message.content.strip()
+        
+        # Clean MetaSota responses
+        if LLM_PROVIDER == "metasota":
+            content = clean_metasota_response(content)
+        
+        return content
 
 def analyze_stock_news(symbol: str, news_list: list[NewsItem]) -> LLMAnalysis:
     # Check if any API key is available
     has_api_key = False
+
+    print(f"📦 LLM_PROVIDER: {LLM_PROVIDER}")
+
     if LLM_PROVIDER == "qwen":
         has_api_key = bool(QWEN_API_KEY)
     elif LLM_PROVIDER == "metasota":
@@ -205,6 +189,7 @@ def analyze_stock_news(symbol: str, news_list: list[NewsItem]) -> LLMAnalysis:
     
     if not has_api_key:
         provider = LLM_PROVIDER if LLM_PROVIDER else "openai"
+        print(f"[LLM] No API key found for provider: {provider}", flush=True)
         return LLMAnalysis(
             sentiment="中性",
             short_term_view=f"未設定 {provider.upper()}_API_KEY，略過分析",
@@ -220,14 +205,14 @@ def analyze_stock_news(symbol: str, news_list: list[NewsItem]) -> LLMAnalysis:
     ) or "No important news found."
 
     prompt = f"""
-你是一位謹慎的股票研究助理。請根據 {symbol} 的最新新聞做摘要。
+你是一位謹慎的股票研究助理。請盡可能搜尋網上最新的資訊或最新新聞對 {symbol} 的影響，包含正面和負面。
 請只輸出 JSON，不要輸出 markdown，不要加註解。
 
 JSON schema:
 {{
   "sentiment": "積極|中性|消極",
-  "short_term_view": "一句話",
-  "long_term_view": "一句話",
+  "short_term_view": "幾句重點",
+  "long_term_view": "幾句重點",
   "risks": ["風險1", "風險2"],
   "action_label": "watch|review|hold|avoid",
   "confidence": 0
@@ -261,6 +246,9 @@ JSON schema:
             content = content.replace("```", "").strip()
             
         data = json.loads(content)
+        
+        print(f"[LLM] Successfully analyzed {symbol} with {LLM_PROVIDER}", flush=True)
+        
         return LLMAnalysis(
             sentiment=data.get("sentiment", "中性"),
             short_term_view=data.get("short_term_view", ""),
@@ -270,6 +258,7 @@ JSON schema:
             confidence=int(data.get("confidence", 50)),
         )
     except Exception as e:
+        print(f"[LLM] Error analyzing {symbol} with {LLM_PROVIDER}: {e}", flush=True)
         return LLMAnalysis(
             sentiment="中性",
             short_term_view=f"分析失敗: {e}",
@@ -303,6 +292,7 @@ def analyze_stock_news_batch(
     
     if not has_api_key:
         provider = LLM_PROVIDER if LLM_PROVIDER else "openai"
+        print(f"[LLM] No API key found for provider: {provider}", flush=True)
         return {
             symbol: LLMAnalysis(
                 sentiment="中性",
@@ -336,8 +326,8 @@ def analyze_stock_news_batch(
   {
     "symbol": "AAPL",
     "sentiment": "積極|中性|消極",
-    "short_term_view": "一句話",
-    "long_term_view": "一句話",
+    "short_term_view": "幾句重點",
+    "long_term_view": "幾句重點",
     "risks": ["風險1", "風險2"],
     "action_label": "watch|review|hold|avoid",
     "confidence": 0
@@ -419,9 +409,11 @@ JSON schema 範例：
                     confidence=10,
                 )
 
+        print(f"[LLM] Batch analysis completed with {LLM_PROVIDER}, processed {len(result)} symbols", flush=True)
         return result
 
     except Exception as e:
+        print(f"[LLM] Batch analysis failed with {LLM_PROVIDER}: {e}", flush=True)
         # 整批失敗：所有 symbol 都回 fallback
         return {
             symbol: LLMAnalysis(
@@ -436,188 +428,63 @@ JSON schema 範例：
         }
 
 
-def test_llm_connection():
-    """
-    Simple test function to verify LLM connection and basic functionality.
-    Tests with simple questions to ensure the LLM is working properly.
-    """
-    print("\n" + "="*50)
-    print("LLM CONNECTION TEST")
-    print("="*50)
-    
-    # Check if API key is configured
-    has_api_key = False
-    provider = LLM_PROVIDER if LLM_PROVIDER else "openai"
-    
-    if provider == "qwen":
-        has_api_key = bool(QWEN_API_KEY)
-        print(f"Provider: Qwen (QWEN_API_KEY {'✓' if has_api_key else '✗'})")
-    elif provider == "metasota":
-        has_api_key = bool(METASOTA_API_KEY)
-        print(f"Provider: MetaSota (METASOTA_API_KEY {'✓' if has_api_key else '✗'})")
-        print(f"Base URL: {METASOTA_BASE_URL if METASOTA_BASE_URL else 'https://metaso.cn/api/v1'}")
-    else:
-        has_api_key = bool(OPENAI_API_KEY)
-        print(f"Provider: OpenAI (OPENAI_API_KEY {'✓' if has_api_key else '✗'})")
-    
-    if not has_api_key:
-        print(f"\n❌ ERROR: {provider.upper()}_API_KEY not configured!")
-        print("Please set the appropriate API key in your environment variables.")
+# Optional: Test function for MetaSota
+def test_metasota():
+    """Test MetaSota connection"""
+    if LLM_PROVIDER != "metasota":
+        print(f"Current provider is {LLM_PROVIDER}, not MetaSota")
         return False
     
-    try:
-        # Get client and model
-        client, model = get_client_and_model()
-        print(f"Model: {model}")
-        
-        # Test questions
-        test_questions = [
-            "What date is today? Please answer in YYYY-MM-DD format.",
-            "Who is the current president of the United States?",
-            "What is 2+2? Answer with just the number."
-        ]
-        
-        print("\n" + "-"*50)
-        print("Running tests...")
-        print("-"*50)
-        
-        all_passed = True
-        
-        for i, question in enumerate(test_questions, 1):
-            print(f"\nTest {i}: {question}")
-            print("-" * 40)
-            
-            try:
-                messages = [
-                    {"role": "system", "content": "You are a helpful assistant. Provide concise and accurate answers."},
-                    {"role": "user", "content": question},
-                ]
-                
-                global LLM_CALL_COUNT
-                LLM_CALL_COUNT += 1
-                
-                print(f"[LLM] test call #{LLM_CALL_COUNT}", flush=True)
-                
-                response = call_llm(client, model, messages, temperature=0.1, max_tokens=100)
-                
-                print(f"Response: {response}")
-                
-                # Simple validation
-                if i == 1 and response:  # Date question
-                    if any(char.isdigit() for char in response):
-                        print("✓ Date test passed")
-                    else:
-                        print("⚠ Date test: Response received but format may not be optimal")
-                        
-                elif i == 2 and response:  # President question
-                    if len(response.strip()) > 0:
-                        print("✓ President test passed")
-                    else:
-                        print("⚠ President test: Empty response")
-                        
-                elif i == 3:  # Math question
-                    if "4" in response:
-                        print("✓ Math test passed")
-                    else:
-                        print("⚠ Math test: Expected '4' in response")
-                
-                print(f"✓ Test {i} completed successfully")
-                
-            except Exception as e:
-                print(f"✗ Test {i} failed: {str(e)}")
-                all_passed = False
-        
-        # Summary
-        print("\n" + "="*50)
-        print("TEST SUMMARY")
-        print("="*50)
-        
-        if all_passed:
-            print("✓ All tests passed!")
-            print(f"✓ LLM provider '{provider}' is working correctly")
-            return True
-        else:
-            print("⚠ Some tests had issues")
-            print("⚠ LLM is responding but some answers may not be accurate")
-            return False
-            
-    except Exception as e:
-        print(f"\n❌ FATAL ERROR: Failed to initialize LLM client: {str(e)}")
-        print(f"Please check your {provider.upper()}_API_KEY and configuration.")
-        return False
-
-
-def quick_test():
-    """
-    A super simple test that just checks if the LLM can respond to a basic question.
-    Useful for quick verification.
-    """
-    print("\n" + "="*50)
-    print("QUICK LLM TEST")
-    print("="*50)
-    
-    provider = LLM_PROVIDER if LLM_PROVIDER else "openai"
-    
-    # Check API key
-    if provider == "qwen" and not QWEN_API_KEY:
-        print("❌ QWEN_API_KEY not set")
-        return False
-    elif provider == "metasota" and not METASOTA_API_KEY:
-        print("❌ METASOTA_API_KEY not set")
-        return False
-    elif provider == "openai" and not OPENAI_API_KEY:
-        print("❌ OPENAI_API_KEY not set")
+    if not METASOTA_API_KEY:
+        print("METASOTA_API_KEY not set")
         return False
     
     try:
         client, model = get_client_and_model()
-        print(f"Provider: {provider}")
-        print(f"Model: {model}")
-        if provider == "metasota":
-            print(f"Base URL: {METASOTA_BASE_URL if METASOTA_BASE_URL else 'https://metaso.cn/api/v1'}")
+        print(f"Testing MetaSota with model: {model}")
         
         messages = [
             {"role": "user", "content": "What is 2+2? Answer with just the number."}
         ]
         
-        print("Sending test request...")
         response = call_llm(client, model, messages, temperature=0.1, max_tokens=10)
         print(f"Response: {response}")
         
         if "4" in response:
-            print("✓ Quick test passed!")
+            print("✅ MetaSota test passed!")
             return True
         else:
-            print("⚠ Quick test: Unexpected response")
+            print("⚠️ MetaSota test: Unexpected response")
             return False
             
     except Exception as e:
-        print(f"❌ Quick test failed: {str(e)}")
+        print(f"❌ MetaSota test failed: {e}")
         return False
 
 
-# Allow running tests from command line
+# Allow running tests from the command line
 if __name__ == "__main__":
     import sys
     
-    print(f"LLM Provider: {LLM_PROVIDER if LLM_PROVIDER else 'openai'}")
+    print("=" * 60)
+    print(f"LLM Configuration:")
+
+    print(f"Current LLM_PROVIDER: {LLM_PROVIDER}")
+    if LLM_PROVIDER == "metasota":
+        if METASOTA_API_KEY:
+            print(f"MetaSota API Key found: {METASOTA_API_KEY[:8]}...")
+            print(f"MetaSota Model: {METASOTA_MODEL if 'METASOTA_MODEL' in dir() else 'not set'}")
+        else:
+            print("⚠️ WARNING: METASOTA_API_KEY is not set in environment!")
+    elif LLM_PROVIDER == "qwen":
+        print(f"Qwen API Key found: {bool(QWEN_API_KEY)}")
+    elif LLM_PROVIDER == "openai":
+        print(f"OpenAI API Key found: {bool(OPENAI_API_KEY)}")
+    print("=" * 60)
     print(f"Python version: {sys.version}")
     
-    print("\nChoose test option:")
-    print("1. Full test (3 questions)")
-    print("2. Quick test (1 question)")
-    print("3. Run both tests")
-    
-    choice = input("\nEnter choice (1/2/3): ").strip()
-    
-    if choice == "1":
-        test_llm_connection()
-    elif choice == "2":
-        quick_test()
-    elif choice == "3":
-        quick_test()
-        print("\n" + "-"*50)
-        test_llm_connection()
+    if LLM_PROVIDER == "metasota":
+        print("\nTesting MetaSota...")
+        test_metasota()
     else:
-        print("Invalid choice. Running quick test by default...")
-        quick_test()
+        print(f"\nCurrently using {LLM_PROVIDER.upper()}. To test MetaSota, set LLM_PROVIDER=metasota in your .env file")
