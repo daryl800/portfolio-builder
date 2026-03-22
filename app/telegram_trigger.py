@@ -8,7 +8,7 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 
 from app.config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 
-PROJECT_DIR = Path.home() / "develop/portfolio-builder"
+PROJECT_DIR = Path.home() / "Apps/portfolio-builder"
 
 async def run_portfolio(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.effective_chat.id
